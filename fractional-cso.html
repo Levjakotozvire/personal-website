@@ -7,451 +7,98 @@
   <meta name="description" content="Fractional Chief Strategy Officer, Sales Leader & Business Development expert. Part-time strategic leadership for startups and scale-ups across CEE and beyond." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css?display=swap&family=Nunito:200,300,400,500,600,700,800,900,200i,300i,400i,500i,600i,700i,800i,900i|Fjalla+One:400,400i&subset=all" rel="stylesheet" />
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w3x8jxwo1a");
-  </script>
-  <!-- Google Analytics 4 -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w3x8jxwo1a");</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7CTTK1KFV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-P7CTTK1KFV');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-P7CTTK1KFV');</script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f2ede8;--text:#1a1a1a;--muted:#888;--border:#ddd8d2;--white:#fff}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;font-weight:300}
+    h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.15}
+    a{color:var(--text);text-decoration:none;transition:opacity .2s}
+    a:hover{opacity:.6}
 
-    :root {
-      --accent: #305c91;
-      --accent-dark: #1e3f6b;
-      --text: #222;
-      --muted: #666;
-      --border: #e5e8ed;
-      --bg-light: #f7f9fc;
-    }
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(242,237,232,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center}
+    .nav-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:center;position:relative}
+    .nav-logo{position:absolute;left:2.5rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;letter-spacing:.05em}
+    .nav-links{display:flex;gap:2.5rem;list-style:none}
+    .nav-links a{font-size:.72rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+    .nav-links a:hover,.nav-links a.active{opacity:.5}
+    .nav-lang{position:absolute;right:2.5rem;display:flex;gap:.5rem;align-items:center;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+    .nav-lang a{color:var(--muted)}
+    .nav-lang a.active{color:var(--text)}
+    .nav-lang span{color:var(--border)}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;position:absolute;right:2.5rem}
+    .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--text);margin:5px 0}
+    .nav-links li{position:relative}
+    .nav-dropdown{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--bg);border:1px solid var(--border);min-width:220px;padding:12px 0 6px;z-index:200}
+    .nav-dropdown::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
+    .nav-links li:hover .nav-dropdown{display:block}
+    .nav-dropdown a{display:block;padding:.55rem 1.2rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+    .nav-dropdown a:hover{color:var(--text);opacity:1;background:rgba(0,0,0,.03)}
 
-    html { scroll-behavior: smooth; }
+    .page-hero{padding:140px 2.5rem 80px;border-bottom:1px solid var(--border)}
+    .page-hero-inner{max-width:900px;margin:0 auto}
+    .breadcrumb{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb span{margin:0 .5rem}
+    .page-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--text);margin-bottom:1.25rem}
+    .page-hero .lead{font-size:1.05rem;font-weight:300;color:var(--muted);max-width:680px;line-height:1.85;margin-bottom:2rem}
+    .tag-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+    .tag{font-size:.72rem;font-weight:300;border:1px solid var(--border);border-radius:50px;padding:.25rem .85rem;color:var(--text)}
+    .btn-outline-dark{display:inline-block;padding:.8rem 2rem;border:1px solid var(--text);border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--text);transition:background .2s,color .2s}
+    .btn-outline-dark:hover{background:var(--text);color:var(--bg);opacity:1}
 
-    body {
-      font-family: 'Nunito', sans-serif;
-      color: var(--text);
-      background: #fff;
-      font-size: 16px;
-      line-height: 1.7;
-      font-weight: 400;
-    }
+    .page-section{padding:70px 2.5rem;border-top:1px solid var(--border)}
+    .section-inner{max-width:900px;margin:0 auto}
+    .sec-label{font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+    .sec-title{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--text);margin-bottom:2rem}
+    .prose p{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:1.2rem}
 
-    h1, h2, h3, h4 {
-      font-family: 'Fjalla One', sans-serif;
-      font-weight: 400;
-      line-height: 1.2;
-    }
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+    .svc-card{border:1px solid var(--border);padding:1.8rem;transition:border-color .2s}
+    .svc-card:hover{border-color:var(--text)}
+    .svc-icon{font-size:1.4rem;margin-bottom:.85rem}
+    .svc-card h3{font-size:1.1rem;font-weight:400;margin-bottom:.5rem;font-family:'Cormorant Garamond',serif}
+    .svc-card p{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.75}
 
-    a { color: var(--accent); text-decoration: none; transition: color .2s; }
-    a:hover { color: var(--accent-dark); }
+    .dash-list{list-style:none;padding:0;margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem}
+    .dash-list li{font-size:.95rem;font-weight:300;color:var(--text);padding-left:1.5rem;position:relative;line-height:1.75}
+    .dash-list li::before{content:'—';position:absolute;left:0;color:var(--muted);font-size:.8rem}
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,.96);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid var(--border);
-      height: 64px;
-      display: flex; align-items: center;
-    }
+    .engagement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+    .eng-card{border:1px solid var(--border);padding:1.8rem;transition:border-color .2s}
+    .eng-card:hover{border-color:var(--text)}
+    .eng-card.featured{border-color:var(--text)}
+    .eng-label{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+    .eng-card h3{font-size:1.2rem;font-weight:400;font-family:'Cormorant Garamond',serif;margin-bottom:.6rem}
+    .eng-card p{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.75}
 
-    .nav-inner {
-      max-width: 1100px; margin: 0 auto; padding: 0 2rem;
-      width: 100%;
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
-    }
+    .for-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:1.5rem}
+    .for-item{border:1px solid var(--border);padding:1rem 1.25rem;font-size:.9rem;font-weight:300;color:var(--text);display:flex;align-items:flex-start;gap:.75rem;line-height:1.65}
+    .for-item::before{content:'—';color:var(--muted);flex-shrink:0;font-size:.8rem;margin-top:.15rem}
 
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-weight: 400; font-size: .9rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
-    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .cta-section{padding:80px 2.5rem;background:var(--text);text-align:center;border-top:1px solid var(--border)}
+    .cta-section h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--bg);margin-bottom:.85rem;font-family:'Cormorant Garamond',serif}
+    .cta-section p{font-size:.95rem;font-weight:300;color:rgba(242,237,232,.6);max-width:480px;margin:0 auto 2rem;line-height:1.8}
+    .btn-outline-light{display:inline-block;padding:.8rem 2rem;border:1px solid rgba(242,237,232,.5);border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);transition:background .2s,color .2s}
+    .btn-outline-light:hover{background:var(--bg);color:var(--text);opacity:1}
 
-    .nav-lang {
-      position: absolute; right: 2rem;
-      display: flex; gap: .4rem; align-items: center;
-    }
+    footer{background:var(--text);color:rgba(242,237,232,.3);text-align:center;padding:1.5rem;font-size:.78rem;font-weight:300;border-top:1px solid rgba(255,255,255,.1)}
+    footer a{color:rgba(242,237,232,.3)}
+    footer a:hover{color:rgba(242,237,232,.6);opacity:1}
 
-    .nav-lang a {
-      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
-      text-transform: uppercase; color: var(--muted);
-      padding: .2rem .45rem; border: 1px solid transparent;
-      transition: color .2s, border-color .2s;
-    }
-    .nav-lang a:hover { color: var(--accent); }
-
-    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
-    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; }
-
-    /* DROPDOWN */
-    .nav-links li { position: relative; }
-
-    .nav-dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.1);
-      min-width: 220px;
-      padding: .4rem 0;
-      z-index: 200;
-      padding-top: 12px;
-    }
-
-    .nav-dropdown::before {
-      content: '';
-      position: absolute;
-      top: -12px;
-      left: 0; right: 0;
-      height: 12px;
-    }
-
-    .nav-links li:hover .nav-dropdown { display: block; }
-
-    .nav-dropdown a {
-      display: block;
-      padding: .6rem 1.2rem;
-      font-size: .85rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      white-space: nowrap;
-    }
-
-    .nav-dropdown a:hover { color: var(--accent); background: var(--bg-light); }
-
-    /* PAGE HERO */
-    .page-hero {
-      padding: 140px 2rem 80px;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .page-hero-inner {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    .breadcrumb {
-      font-size: .82rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: 1.5rem;
-    }
-
-    .breadcrumb a { color: var(--muted); }
-    .breadcrumb a:hover { color: var(--accent); }
-    .breadcrumb span { margin: 0 .5rem; }
-
-    .page-hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--text);
-      margin-bottom: 1.25rem;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page-hero .lead {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 640px;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-
-    .badge-row {
-      display: flex; flex-wrap: wrap; gap: .6rem;
-      margin-bottom: 2rem;
-    }
-
-    .badge {
-      background: var(--accent);
-      color: #fff;
-      padding: .35rem .85rem;
-      border-radius: 20px;
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .03em;
-    }
-
-    /* CONTENT */
-    .content-wrap {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* SECTIONS */
-    .page-section {
-      padding: 70px 2rem;
-    }
-
-    .page-section + .page-section {
-      border-top: 1px solid var(--border);
-    }
-
-    .page-section.bg-light {
-      background: var(--bg-light);
-    }
-
-    .section-label {
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: .75rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      color: var(--text);
-      margin-bottom: .5rem;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .section-line {
-      width: 40px; height: 3px;
-      background: var(--accent);
-      margin-bottom: 2rem;
-      border-radius: 2px;
-    }
-
-    .prose p {
-      font-size: 17px;
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .prose p:last-child { margin-bottom: 0; }
-
-    /* SERVICES GRID */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .service-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.8rem;
-      background: #fff;
-      transition: box-shadow .2s, transform .2s;
-    }
-
-    .service-card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,.08);
-      transform: translateY(-3px);
-    }
-
-    .service-icon {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.1rem;
-      color: var(--text);
-      margin-bottom: .6rem;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .service-card p {
-      font-size: .92rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* WHAT'S INCLUDED LIST */
-    .included-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-    }
-
-    .included-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 17px;
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .included-list li:last-child { border-bottom: none; }
-
-    .check {
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 3px;
-    }
-
-    .check svg { width: 12px; height: 12px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-
-    /* ENGAGEMENT MODELS */
-    .engagement-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .engagement-card {
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      padding: 2rem 1.8rem;
-      background: #fff;
-      transition: border-color .2s;
-    }
-
-    .engagement-card:hover { border-color: var(--accent); }
-
-    .engagement-card.featured {
-      border-color: var(--accent);
-      background: rgba(48,92,145,.04);
-    }
-
-    .engagement-label {
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: .5rem;
-    }
-
-    .engagement-card h3 {
-      font-size: 1.3rem;
-      color: var(--text);
-      margin-bottom: .75rem;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .engagement-card p {
-      font-size: .92rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* WHO IS IT FOR */
-    .for-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-
-    .for-list li {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.1rem 1.4rem;
-      font-size: 17px;
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-    }
-
-    .for-list li::before {
-      content: '';
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* CTA BLOCK */
-    .cta-block {
-      background: var(--accent);
-      color: #fff;
-      padding: 70px 2rem;
-      text-align: center;
-    }
-
-    .cta-block h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: #fff;
-      margin-bottom: 1rem;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .cta-block p {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,.8);
-      max-width: 520px;
-      margin: 0 auto 2rem;
-      line-height: 1.8;
-    }
-
-    .btn-white {
-      display: inline-block;
-      padding: .85rem 2.5rem;
-      background: #fff;
-      color: var(--accent);
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: .9rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      transition: background .2s, color .2s;
-    }
-
-    .btn-white:hover { background: rgba(255,255,255,.9); color: var(--accent-dark); }
-
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: rgba(255,255,255,.4);
-      text-align: center;
-      padding: 1.5rem;
-      font-size: .82rem;
-    }
-
-    footer a { color: rgba(255,255,255,.4); }
-    footer a:hover { color: rgba(255,255,255,.7); }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fff; padding: 1rem 2rem; border-bottom: 1px solid var(--border); gap: 1rem; }
-      .nav-links.open { display: flex; }
-      .nav-toggle { display: block; }
-      .services-grid { grid-template-columns: 1fr; }
-      .engagement-grid { grid-template-columns: 1fr; }
-    }
+    @media(max-width:900px){.services-grid{grid-template-columns:1fr 1fr}.engagement-grid{grid-template-columns:1fr}.for-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--bg);padding:1rem 2rem;border-bottom:1px solid var(--border);gap:1rem}.nav-links.open{display:flex}.nav-toggle{display:block}.nav-lang{display:none}.services-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LK</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#work">Experience</a></li>
@@ -460,98 +107,72 @@
           <a href="fractional-cso.html" class="active">Services</a>
           <div class="nav-dropdown">
             <a href="fractional-cso.html">Fractional CSO</a>
-            <a href="fractional-cso.html#sales-strategy">Sales Strategy &amp; Advisory</a>
-            <a href="fractional-cso.html#market-expansion">Market Expansion (CEE)</a>
-            <a href="fractional-cso.html#partnerships">Partnership Development</a>
-            <a href="fractional-cso.html#gtm">Go-to-Market Consulting</a>
+            <a href="sales-strategy.html">Sales Strategy &amp; Advisory</a>
+            <a href="market-expansion.html">Market Expansion (CEE)</a>
+            <a href="partnership-development.html">Partnership Development</a>
+            <a href="go-to-market.html">Go-to-Market Consulting</a>
           </div>
         </li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-lang">
-        <a href="fractional-cso.html" class="active">EN</a>
-        <span style="color:var(--border)">|</span>
-        <a href="index-cz.html">CZ</a>
-      </div>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <div class="nav-lang"><a href="fractional-cso.html" class="active">EN</a><span>|</span><a href="index-cz.html">CZ</a></div>
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero-inner">
-      <div class="breadcrumb">
-        <a href="index.html">Levan Kezua</a>
-        <span>›</span>
-        Fractional CSO &amp; Business Development
+      <div class="breadcrumb"><a href="index.html">Levan Kezua</a><span>›</span> Services</div>
+      <h1>Fractional CSO &amp; Business Development</h1>
+      <p class="lead">Senior commercial leadership — part-time, without the overhead. I embed into your team as a fractional Chief Strategy Officer, Sales Leader, or Business Development partner to drive growth, open new markets, and build lasting partnerships.</p>
+      <div class="tag-row">
+        <span class="tag">Fractional CSO</span>
+        <span class="tag">Sales Leadership</span>
+        <span class="tag">Business Development</span>
+        <span class="tag">Go-to-Market</span>
+        <span class="tag">CEE / Balkans / Baltics</span>
+        <span class="tag">Partnerships</span>
       </div>
-      <h1>Fractional CSO &amp; Business Development Services</h1>
-      <p class="lead">
-        Senior commercial leadership — part-time, without the overhead. I embed into
-        your team as a fractional Chief Strategy Officer, Sales Leader, or Business
-        Development partner to drive growth, open new markets, and build lasting partnerships.
-      </p>
-      <div class="badge-row">
-        <span class="badge">Fractional CSO</span>
-        <span class="badge">Sales Leadership</span>
-        <span class="badge">Business Development</span>
-        <span class="badge">Go-to-Market</span>
-        <span class="badge">CEE / Balkans / Baltics</span>
-        <span class="badge">Partnerships</span>
-      </div>
-      <a href="index.html#contact" class="btn-white" style="background:var(--accent);color:#fff;display:inline-block;padding:.85rem 2.5rem;border-radius:4px;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Work with me</a>
+      <a href="index.html#contact" class="btn-outline-dark">Work with me</a>
     </div>
   </div>
 
-  <!-- WHAT I OFFER -->
   <div class="page-section">
-    <div class="content-wrap">
-      <p class="section-label">What I offer</p>
-      <h2 class="section-title">Strategic commercial leadership on demand</h2>
-      <div class="section-line"></div>
+    <div class="section-inner">
+      <p class="sec-label">Take a look at my services</p>
+      <h2 class="sec-title">What I offer</h2>
       <div class="prose">
-        <p>
-          Not every company needs a full-time CSO or Head of Sales — but every growing company
-          needs strategic commercial thinking. I work with startups, scale-ups, and established
-          businesses that want senior-level guidance without committing to a full-time hire.
-        </p>
-        <p>
-          With 10+ years across performance marketing, brand partnerships, enterprise sales,
-          and market expansion — spanning companies like GLAMI Group, FLEXDOG, Httpool/Aleph,
-          and Footshop — I bring real operational experience, not just strategy decks.
-        </p>
+        <p>Not every company needs a full-time CSO or Head of Sales — but every growing company needs strategic commercial thinking. I work with startups, scale-ups, and established businesses that want senior-level guidance without committing to a full-time hire.</p>
+        <p>With 10+ years across performance marketing, brand partnerships, enterprise sales, and market expansion — spanning companies like GLAMI Group, FLEXDOG, Httpool/Aleph, and Footshop — I bring real operational experience, not just strategy decks.</p>
       </div>
-
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🎯</div>
-          <h3>Fractional CSO</h3>
-          <p>Part-time Chief Strategy Officer embedding into your leadership team. I shape your commercial direction, own strategic priorities, and drive alignment across sales, BD, and marketing.</p>
+        <div class="svc-card">
+          <div class="svc-icon">—</div>
+          <h3><a href="fractional-cso.html">Fractional CSO</a></h3>
+          <p>Part-time Chief Strategy Officer embedding into your leadership team. I shape your commercial direction and drive alignment across sales, BD, and marketing.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📈</div>
-          <h3>Sales Leadership</h3>
-          <p>Build or restructure your sales function. From pipeline architecture and team hiring to coaching and closing enterprise deals — I lead from the front.</p>
+        <div class="svc-card">
+          <div class="svc-icon">—</div>
+          <h3><a href="sales-strategy.html">Sales Strategy &amp; Advisory</a></h3>
+          <p>Build a high-performing sales function from the ground up. From pipeline architecture to team coaching and closing enterprise deals.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🤝</div>
-          <h3>Business Development</h3>
-          <p>Identify, develop, and close high-value partnerships. I specialize in B2B deal-making across e-commerce, AdTech, SaaS, and retail — with a strong network across CEE markets.</p>
+        <div class="svc-card">
+          <div class="svc-icon">—</div>
+          <h3><a href="market-expansion.html">Market Expansion (CEE)</a></h3>
+          <p>Entering a new market? I've expanded into 12+ markets across CEE, Balkans, and Baltics. I map the landscape and build the local go-to-market playbook.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🗺️</div>
-          <h3>Market Expansion</h3>
-          <p>Entering a new country or region? I've expanded into 12+ markets across CEE, Balkans, and Baltics. I map the landscape, identify partners, and build the local go-to-market playbook.</p>
+        <div class="svc-card">
+          <div class="svc-icon">—</div>
+          <h3><a href="partnership-development.html">Partnership Development</a></h3>
+          <p>Identify, develop, and close high-value partnerships. I specialize in B2B deal-making across e-commerce, AdTech, SaaS, and retail.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🚀</div>
-          <h3>Go-to-Market Strategy</h3>
-          <p>Launch new products or enter new verticals with a clear GTM plan. I work with your team to define positioning, target segments, outreach strategy, and revenue goals.</p>
+        <div class="svc-card">
+          <div class="svc-icon">—</div>
+          <h3><a href="go-to-market.html">Go-to-Market Consulting</a></h3>
+          <p>Launch new products or enter new verticals with a clear GTM plan — positioning, target segments, outreach strategy, and revenue goals.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">💡</div>
+        <div class="svc-card">
+          <div class="svc-icon">—</div>
           <h3>Advisory &amp; Assessment</h3>
           <p>One-time commercial audit of your sales process, partnership strategy, or market positioning — delivered as a structured report with actionable recommendations.</p>
         </div>
@@ -559,104 +180,70 @@
     </div>
   </div>
 
-  <!-- WHAT'S INCLUDED -->
-  <div class="page-section bg-light">
-    <div class="content-wrap">
-      <p class="section-label">How it works</p>
-      <h2 class="section-title">What you get</h2>
-      <div class="section-line"></div>
-      <ul class="included-list">
-        <li>
-          <span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-          <span>Dedicated time each week — typically 1–3 days depending on engagement model</span>
-        </li>
-        <li>
-          <span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-          <span>Participation in leadership meetings, pipeline reviews, and strategic planning</span>
-        </li>
-        <li>
-          <span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-          <span>Direct involvement in key partnership negotiations and enterprise deals</span>
-        </li>
-        <li>
-          <span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-          <span>Access to my network across CEE, including brands, agencies, platforms, and investors</span>
-        </li>
-        <li>
-          <span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-          <span>Monthly progress reports and KPI tracking aligned to your growth targets</span>
-        </li>
-        <li>
-          <span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-          <span>Flexible engagement — scale up or down based on your current needs</span>
-        </li>
+  <div class="page-section">
+    <div class="section-inner">
+      <p class="sec-label">How it works</p>
+      <h2 class="sec-title">What you get</h2>
+      <ul class="dash-list">
+        <li>Dedicated time each week — typically 1–3 days depending on engagement model</li>
+        <li>Participation in leadership meetings, pipeline reviews, and strategic planning</li>
+        <li>Direct involvement in key partnership negotiations and enterprise deals</li>
+        <li>Access to my network across CEE, including brands, agencies, platforms, and investors</li>
+        <li>Monthly progress reports and KPI tracking aligned to your growth targets</li>
+        <li>Flexible engagement — scale up or down based on your current needs</li>
       </ul>
     </div>
   </div>
 
-  <!-- ENGAGEMENT MODELS -->
   <div class="page-section">
-    <div class="content-wrap">
-      <p class="section-label">Engagement models</p>
-      <h2 class="section-title">Choose what works for you</h2>
-      <div class="section-line"></div>
+    <div class="section-inner">
+      <p class="sec-label">Engagement models</p>
+      <h2 class="sec-title">Choose what works for you</h2>
       <div class="engagement-grid">
-        <div class="engagement-card">
-          <p class="engagement-label">One-time</p>
+        <div class="eng-card">
+          <p class="eng-label">One-time</p>
           <h3>Assessment &amp; Report</h3>
           <p>A focused deep-dive into your commercial setup. I review your sales process, partnership strategy, or market positioning and deliver a clear action plan.</p>
         </div>
-        <div class="engagement-card featured">
-          <p class="engagement-label">Most popular</p>
+        <div class="eng-card featured">
+          <p class="eng-label">Most popular</p>
           <h3>Fractional Retainer</h3>
           <p>Ongoing part-time engagement — typically 1–2 days per week. I join your team, attend key meetings, and actively drive commercial results month to month.</p>
         </div>
-        <div class="engagement-card">
-          <p class="engagement-label">Project-based</p>
+        <div class="eng-card">
+          <p class="eng-label">Project-based</p>
           <h3>Market Entry / GTM</h3>
-          <p>A defined project with a clear scope — e.g. entering a new market, launching a new product, or building a partnership pipeline from scratch.</p>
+          <p>A defined project with a clear scope — entering a new market, launching a new product, or building a partnership pipeline from scratch.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- WHO IS IT FOR -->
-  <div class="page-section bg-light">
-    <div class="content-wrap">
-      <p class="section-label">Who I work with</p>
-      <h2 class="section-title">This is for you if…</h2>
-      <div class="section-line"></div>
-      <ul class="for-list">
-        <li>You're a startup or scale-up that needs senior commercial leadership but isn't ready for a full-time hire</li>
-        <li>You're entering the CEE, Balkans, or Baltics market and need a local expert with an existing network</li>
-        <li>Your sales or BD function needs structure, process, and someone to lead from the front</li>
-        <li>You're launching a new product and need a go-to-market strategy and execution partner</li>
-        <li>You want to build a meaningful partnership ecosystem, not just transactional deals</li>
-        <li>You need an external perspective on your commercial strategy before your next funding round</li>
-      </ul>
+  <div class="page-section">
+    <div class="section-inner">
+      <p class="sec-label">Who I work with</p>
+      <h2 class="sec-title">This is for you if…</h2>
+      <div class="for-grid">
+        <div class="for-item">You're a startup or scale-up that needs senior commercial leadership but isn't ready for a full-time hire</div>
+        <div class="for-item">You're entering the CEE, Balkans, or Baltics market and need a local expert with an existing network</div>
+        <div class="for-item">Your sales or BD function needs structure, process, and someone to lead from the front</div>
+        <div class="for-item">You're launching a new product and need a go-to-market strategy and execution partner</div>
+        <div class="for-item">You want to build a meaningful partnership ecosystem, not just transactional deals</div>
+        <div class="for-item">You need an external perspective on your commercial strategy before your next funding round</div>
+      </div>
     </div>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-block">
+  <div class="cta-section">
     <h2>Let's talk about your growth</h2>
     <p>Whether you know exactly what you need or are still figuring it out — reach out and we'll find the right way to work together.</p>
-    <a href="index.html#contact" class="btn-white">Get in touch</a>
+    <a href="index.html#contact" class="btn-outline-light">Get in touch</a>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Levan Kezua &mdash; <a href="index.html">levankezua.com</a></p>
-  </footer>
+  <footer><p>© 2026 Levan Kezua — <a href="index.html">levankezua.com</a></p></footer>
 
   <script>
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (navToggle) {
-      navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    }
+    document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
   </script>
-
 </body>
 </html>
