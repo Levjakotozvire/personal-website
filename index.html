@@ -407,6 +407,55 @@
 
     .skill-tag:hover { border-color: var(--text); }
 
+    /* Skills 4-column grid */
+    .skills-grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+
+    .skills-col-title {
+      font-family: 'Inter', sans-serif;
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+    }
+
+    .skills-list li {
+      font-size: .9rem;
+      font-weight: 300;
+      color: var(--text);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .skills-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+      font-size: .75rem;
+    }
+
+    @media (max-width: 900px) {
+      .skills-grid-4col { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .skills-grid-4col { grid-template-columns: 1fr; }
+    }
+
     /* ── WORK / PORTFOLIO ────────────────── */
     #portfolio { background: var(--bg); border-top: 1px solid var(--border); }
 
@@ -966,23 +1015,65 @@
 
       <!-- SKILLS -->
       <div class="se-panel" id="se-skills">
-        <div class="skills-tabs">
-          <button class="skill-tab-btn active" data-tab="bd">Business Development</button>
-          <button class="skill-tab-btn" data-tab="marketing">Marketing</button>
-          <button class="skill-tab-btn" data-tab="leadership">Leadership</button>
-          <button class="skill-tab-btn" data-tab="platforms">Platforms &amp; Tools</button>
-        </div>
-        <div class="tab-panel active" id="tab-bd">
-          <span class="skill-tag">Strategic Partnerships</span><span class="skill-tag">Market Expansion</span><span class="skill-tag">B2B Sales</span><span class="skill-tag">Affiliate Marketing</span><span class="skill-tag">Partner Onboarding</span><span class="skill-tag">Revenue Growth</span><span class="skill-tag">Deal Closing</span><span class="skill-tag">Account Management</span><span class="skill-tag">CEE Markets</span>
-        </div>
-        <div class="tab-panel" id="tab-marketing">
-          <span class="skill-tag">Performance Marketing</span><span class="skill-tag">Brand Partnerships</span><span class="skill-tag">Social Media Strategy</span><span class="skill-tag">Paid Advertising</span><span class="skill-tag">Influencer Marketing</span><span class="skill-tag">Campaign Management</span><span class="skill-tag">KPI Reporting</span><span class="skill-tag">TikTok Ads</span><span class="skill-tag">Meta Ads</span><span class="skill-tag">Snapchat Ads</span>
-        </div>
-        <div class="tab-panel" id="tab-leadership">
-          <span class="skill-tag">Team Leadership</span><span class="skill-tag">Strategic Planning</span><span class="skill-tag">Cross-functional Collaboration</span><span class="skill-tag">Stakeholder Management</span><span class="skill-tag">Mentoring</span><span class="skill-tag">OKRs &amp; Target Setting</span><span class="skill-tag">Go-to-Market Strategy</span>
-        </div>
-        <div class="tab-panel" id="tab-platforms">
-          <span class="skill-tag">TikTok for Business</span><span class="skill-tag">Snapchat Ads Manager</span><span class="skill-tag">Google Suite</span><span class="skill-tag">Meta Business Suite</span><span class="skill-tag">CRM Tools</span><span class="skill-tag">Amazon Advertising</span>
+        <div class="skills-grid-4col">
+          <div class="skills-col">
+            <p class="skills-col-title">Business Development</p>
+            <ul class="skills-list">
+              <li>Strategic Partnerships</li>
+              <li>Market Expansion</li>
+              <li>B2B Sales</li>
+              <li>Affiliate Marketing</li>
+              <li>Partner Onboarding</li>
+              <li>Revenue Growth</li>
+              <li>Deal Closing</li>
+              <li>Account Management</li>
+              <li>CEE Markets</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <p class="skills-col-title">Marketing</p>
+            <ul class="skills-list">
+              <li>Performance Marketing</li>
+              <li>Brand Partnerships</li>
+              <li>Social Media Strategy</li>
+              <li>Paid Advertising</li>
+              <li>Influencer Marketing</li>
+              <li>Campaign Management</li>
+              <li>KPI Reporting</li>
+              <li>TikTok Ads</li>
+              <li>Meta Ads</li>
+              <li>Snapchat Ads</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <p class="skills-col-title">Leadership</p>
+            <ul class="skills-list">
+              <li>Team Leadership</li>
+              <li>Strategic Planning</li>
+              <li>Cross-functional Collaboration</li>
+              <li>Stakeholder Management</li>
+              <li>Mentoring</li>
+              <li>OKRs &amp; Target Setting</li>
+              <li>Go-to-Market Strategy</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <p class="skills-col-title">Platforms &amp; Tools</p>
+            <ul class="skills-list">
+              <li>TikTok for Business</li>
+              <li>Meta Business Suite</li>
+              <li>Snapchat Ads Manager</li>
+              <li>Google Suite</li>
+              <li>Amazon Advertising</li>
+              <li>CRM Tools</li>
+              <li>LinkedIn Sales Navigator</li>
+              <li>HubSpot</li>
+              <li>Salesforce</li>
+              <li>Notion</li>
+              <li>Slack</li>
+              <li>Looker Studio</li>
+            </ul>
+          </div>
         </div>
       </div>
 
