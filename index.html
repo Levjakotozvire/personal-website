@@ -207,8 +207,8 @@
 
     .about-grid p {
       font-size: 1rem;
-      color: var(--text);
-      line-height: 1.9;
+      color: var(--muted);
+      line-height: 2;
       margin-bottom: 1.4rem;
       font-weight: 300;
     }
@@ -261,23 +261,25 @@
     .exp-tab {
       background: none; border: none; cursor: pointer;
       display: flex; align-items: center; gap: .85rem;
-      padding: .85rem 1rem .85rem 0;
+      padding: .75rem 1rem .75rem 0;
+      padding-right: 2rem;
       text-align: left;
-      border-bottom: 1px solid var(--border);
-      transition: opacity .2s;
+      border-right: 2px solid transparent;
+      transition: border-color .2s;
+      margin-right: -1px;
     }
 
-    .exp-tab:last-child { border-bottom: none; }
-    .exp-tab:hover { opacity: .7; }
+    .exp-tab:hover { border-color: var(--border); }
 
     .exp-logo-box {
       width: 40px; height: 40px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--white);
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: var(--surface2);
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
       overflow: hidden;
+      padding: 4px;
     }
 
     .exp-logo-box img { width: 28px; height: 28px; object-fit: contain; filter: brightness(0); }
@@ -290,8 +292,9 @@
       letter-spacing: .02em;
     }
 
+    .exp-tab.active { border-color: var(--gold); }
     .exp-tab.active .exp-tab-name { color: var(--text); font-weight: 400; }
-    .exp-tab.active .exp-logo-box { border-color: var(--gold); }
+    .exp-tab.active .exp-logo-box { border-color: transparent; }
 
     .exp-detail { flex: 1; padding: 0 0 0 3rem; }
 
@@ -321,7 +324,7 @@
 
     .exp-panel li {
       font-size: .95rem;
-      color: var(--text);
+      color: var(--muted);
       font-weight: 300;
       line-height: 1.8;
       padding-left: 1.5rem;
@@ -332,7 +335,7 @@
     .exp-panel li::before {
       content: '—';
       position: absolute; left: 0;
-      color: var(--muted);
+      color: var(--gold);
     }
 
     .exp-section-label {
@@ -358,20 +361,23 @@
 
     .exp-highlights-bar {
       border-left: 2px solid var(--gold);
-      padding-left: 1rem;
-      display: flex; flex-wrap: wrap; gap: .2rem .5rem; align-items: center;
+      padding-left: 1.25rem;
+    }
+
+    .exp-highlights-inner {
+      display: flex; flex-wrap: wrap; gap: .15rem 1.5rem;
     }
 
     .exp-highlights-bar span {
-      font-size: .82rem; font-weight: 300; color: var(--text);
+      font-size: .78rem; font-weight: 300; color: var(--text);
     }
 
-    .exp-highlights-bar span + span::before { content: ' · '; color: var(--muted); }
-
     .exp-links { display: flex; flex-direction: column; gap: .3rem; margin-top: .5rem; }
-    .exp-links a { font-size: .85rem; font-weight: 300; color: var(--muted); }
-    .exp-links a:hover { color: var(--text); opacity: 1; }
+    .exp-links a { font-size: .85rem; font-weight: 300; color: var(--gold); }
+    .exp-links a:hover { opacity: .7; }
     .exp-cat { font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: .6rem; }
+    .exp-role-link { color: var(--gold); }
+    .exp-role-link:hover { text-decoration: underline; opacity: 1; }
 
     /* Skills */
     .skills-tabs { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
@@ -435,19 +441,18 @@
     }
 
     .skills-list li {
-      font-size: .9rem;
+      font-size: .88rem;
       font-weight: 300;
-      color: var(--text);
-      padding-left: 1.25rem;
-      position: relative;
+      color: var(--muted);
+      display: flex;
+      gap: .5rem;
+      align-items: baseline;
     }
 
     .skills-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--muted);
-      font-size: .75rem;
+      content: '–';
+      color: var(--border);
+      flex-shrink: 0;
     }
 
     @media (max-width: 900px) {
@@ -467,10 +472,11 @@
       gap: 3rem 3rem;
     }
 
-    .work-item {}
+    .work-item { display: flex; flex-direction: column; }
+    a.work-item { color: var(--text); }
 
     .work-img-wrap {
-      width: 100%; aspect-ratio: 16/10;
+      width: 100%; aspect-ratio: 16/9;
       overflow: hidden; position: relative;
       border-radius: 1rem;
       margin-bottom: 1.25rem;
@@ -489,9 +495,13 @@
       position: absolute; top: 1rem; left: 1rem;
       font-family: 'DM Sans', sans-serif;
       font-size: .7rem; font-weight: 400;
-      color: rgba(255,255,255,.7);
-      letter-spacing: .08em;
+      color: var(--muted);
+      letter-spacing: .06em;
       z-index: 2;
+      background: rgba(242,237,232,.6);
+      backdrop-filter: blur(4px);
+      padding: .2rem .55rem;
+      border-radius: 50px;
     }
 
     .work-nda-label {
@@ -503,20 +513,35 @@
     }
 
     .work-title {
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      font-weight: 400;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      font-weight: 500;
       color: var(--text);
       margin-bottom: .6rem;
       line-height: 1.2;
+      transition: color .2s;
     }
 
+    .work-item:hover .work-title { color: var(--gold); }
+
     .work-desc {
-      font-size: .9rem;
+      font-size: .95rem;
       font-weight: 300;
       color: var(--muted);
-      line-height: 1.75;
+      line-height: 1.8;
       margin-bottom: .85rem;
     }
+
+    .work-link {
+      font-size: .7rem; font-weight: 400;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0;
+      transition: opacity .2s;
+      display: block;
+      margin-top: .5rem;
+    }
+
+    .work-item:hover .work-link { opacity: 1; }
 
     .work-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
 
@@ -843,7 +868,7 @@
           <div class="exp-detail">
 
             <div class="exp-panel active" id="exp-glami">
-              <h3 class="exp-role">Business Development Lead <em>at</em> GLAMI Group</h3>
+              <h3 class="exp-role">Business Development Lead <em>at</em> <a href="https://glami.cz/" target="_blank" rel="noopener" class="exp-role-link">GLAMI Group</a></h3>
               <p class="exp-date">Dec 2025 – Present</p>
               <ul>
                 <li>Developing and scaling markets across CEE, Balkans, and Baltics.</li>
@@ -858,17 +883,19 @@
                 <span class="exp-chip">B2B Sales</span>
                 <span class="exp-chip">Fashion Tech</span>
               </div>
-              <p class="exp-section-label">Highlights</p>
               <div class="exp-highlights-bar">
-                <span>Business Development Lead</span>
-                <span>CEE, Balkans &amp; Baltics expansion</span>
-                <span>Strategic partnerships</span>
-                <span>30M+ monthly users platform</span>
+                <p class="exp-section-label" style="margin-bottom:.6rem">Highlights</p>
+                <div class="exp-highlights-inner">
+                  <span>Business Development Lead</span>
+                  <span>CEE, Balkans &amp; Baltics expansion</span>
+                  <span>Strategic partnerships</span>
+                  <span>30M+ monthly users platform</span>
+                </div>
               </div>
             </div>
 
             <div class="exp-panel" id="exp-arcetix">
-              <h3 class="exp-role">Co-Founder &amp; CSO <em>at</em> Arcetix</h3>
+              <h3 class="exp-role">Co-Founder &amp; CSO <em>at</em> <a href="https://arcetix.com/" target="_blank" rel="noopener" class="exp-role-link">Arcetix</a></h3>
               <p class="exp-date">Jul 2025 – Present</p>
               <ul>
                 <li>Co-founded Arcetix and lead the company as Chief Strategy Officer.</li>
@@ -883,17 +910,19 @@
                 <span class="exp-chip">Partner Development</span>
                 <span class="exp-chip">Investor Relations</span>
               </div>
-              <p class="exp-section-label">Highlights</p>
               <div class="exp-highlights-bar">
-                <span>UpSteer 2025 Incubator — Asseco Central Europe</span>
-                <span>20+ pilot partners</span>
-                <span>QA Automation SaaS</span>
-                <span>Co-Founder &amp; CSO</span>
+                <p class="exp-section-label" style="margin-bottom:.6rem">Highlights</p>
+                <div class="exp-highlights-inner">
+                  <span>UpSteer 2025 Incubator — Asseco Central Europe</span>
+                  <span>20+ pilot partners</span>
+                  <span>QA Automation SaaS</span>
+                  <span>Co-Founder &amp; CSO</span>
+                </div>
               </div>
             </div>
 
             <div class="exp-panel" id="exp-flexdog">
-              <h3 class="exp-role">Head of Brand Partnerships &amp; Sales <em>at</em> FLEXDOG</h3>
+              <h3 class="exp-role">Head of Brand Partnerships &amp; Sales <em>at</em> <a href="https://www.flexdog.com/" target="_blank" rel="noopener" class="exp-role-link">FLEXDOG</a></h3>
               <p class="exp-date">Jul 2024 – Nov 2025</p>
               <ul>
                 <li>Led brand partnerships and sales across 12 markets for a curated sneaker &amp; streetwear marketplace.</li>
@@ -910,17 +939,19 @@
                 <span class="exp-chip">Account Management</span>
                 <span class="exp-chip">Revenue Growth</span>
               </div>
-              <p class="exp-section-label">Highlights</p>
               <div class="exp-highlights-bar">
-                <span>Head of Brand Partnerships &amp; Sales</span>
-                <span>CEE market expansion</span>
-                <span>126% of Q1 vendor goals</span>
-                <span>12 markets</span>
+                <p class="exp-section-label" style="margin-bottom:.6rem">Highlights</p>
+                <div class="exp-highlights-inner">
+                  <span>Head of Brand Partnerships &amp; Sales</span>
+                  <span>CEE market expansion</span>
+                  <span>126% of Q1 vendor goals</span>
+                  <span>12 markets</span>
+                </div>
               </div>
             </div>
 
             <div class="exp-panel" id="exp-httpool">
-              <h3 class="exp-role">Regional Client Partner Lead, Central Europe <em>at</em> Httpool by Aleph</h3>
+              <h3 class="exp-role">Regional Client Partner Lead, Central Europe <em>at</em> <a href="https://www.alephholding.com/" target="_blank" rel="noopener" class="exp-role-link">Httpool by Aleph</a></h3>
               <p class="exp-date">Nov 2021 – Jun 2024</p>
               <ul>
                 <li>Led a team of 5 driving TikTok Ads revenue (full-funnel) for CZ/SK/HU region.</li>
@@ -948,7 +979,7 @@
             </div>
 
             <div class="exp-panel" id="exp-footshop">
-              <h3 class="exp-role">Social Media Team Leader <em>at</em> Footshop</h3>
+              <h3 class="exp-role">Social Media Team Leader <em>at</em> <a href="https://footshop.com/" target="_blank" rel="noopener" class="exp-role-link">Footshop</a></h3>
               <p class="exp-date">Feb 2020 – Oct 2021</p>
               <ul>
                 <li>Led a team of 7+ specialists across Facebook, Instagram, TikTok, YouTube, and Influencers.</li>
@@ -964,16 +995,18 @@
                 <span class="exp-chip">Influencer Marketing</span>
                 <span class="exp-chip">KPI Management</span>
               </div>
-              <p class="exp-section-label">Highlights</p>
               <div class="exp-highlights-bar">
-                <span>Social Media Team Leader</span>
-                <span>7+ specialists</span>
-                <span>Facebook, Instagram, TikTok, YouTube</span>
+                <p class="exp-section-label" style="margin-bottom:.6rem">Highlights</p>
+                <div class="exp-highlights-inner">
+                  <span>Social Media Team Leader</span>
+                  <span>7+ specialists</span>
+                  <span>Facebook, Instagram, TikTok, YouTube</span>
+                </div>
               </div>
             </div>
 
             <div class="exp-panel" id="exp-mccann">
-              <h3 class="exp-role">Senior Social Media &amp; Advertising Manager <em>at</em> McCann Prague</h3>
+              <h3 class="exp-role">Senior Social Media &amp; Advertising Manager <em>at</em> <a href="https://mccann.com/" target="_blank" rel="noopener" class="exp-role-link">McCann Prague</a></h3>
               <p class="exp-date">May 2016 – Feb 2020</p>
               <ul>
                 <li>Worked on global advertising campaigns for a globally recognised agency network.</li>
@@ -988,16 +1021,18 @@
                 <span class="exp-chip">Brand Management</span>
                 <span class="exp-chip">Agency</span>
               </div>
-              <p class="exp-section-label">Highlights</p>
               <div class="exp-highlights-bar">
-                <span>Nokian Tyres — key account</span>
-                <span>6-country social media management</span>
-                <span>Global agency network</span>
+                <p class="exp-section-label" style="margin-bottom:.6rem">Highlights</p>
+                <div class="exp-highlights-inner">
+                  <span>Nokian Tyres — key account</span>
+                  <span>6-country social media management</span>
+                  <span>Global agency network</span>
+                </div>
               </div>
             </div>
 
             <div class="exp-panel" id="exp-socialsharks">
-              <h3 class="exp-role">Social Media Specialist <em>at</em> Socialsharks</h3>
+              <h3 class="exp-role">Social Media Specialist <em>at</em> <a href="https://www.socialsharks.cz/" target="_blank" rel="noopener" class="exp-role-link">Socialsharks</a></h3>
               <p class="exp-date">Sep 2014 – Apr 2016</p>
               <ul>
                 <li>Executed social media content plans on Facebook, Instagram, and VKontakte.</li>
@@ -1101,63 +1136,80 @@
 
         <div class="work-item">
           <div class="work-img-wrap" style="background:#1a1a1a;">
-            <img src="work-nda.jpg" alt="Confidential" style="filter:blur(6px) brightness(.45);transform:scale(1.08);">
+            <img src="work-nda.jpg" alt="Confidential" style="width:100%;height:100%;object-fit:cover;filter:blur(6px) brightness(.45);transform:scale(1.08);">
             <span class="work-num">01</span>
             <span class="work-nda-label">Under NDA</span>
           </div>
-          <h3 class="work-title">Undisclosed · NDA</h3>
-          <p class="work-desc">Consulted for a military-sector organisation on strategic communication — covering full communications audit, messaging architecture, and go-to-market consultancy.</p>
-          <div class="work-tags"><span class="work-tag">Communication Strategy</span><span class="work-tag">Audit</span><span class="work-tag">Consultancy</span></div>
+          <div style="padding:.25rem 0">
+            <h3 class="work-title">Undisclosed · NDA</h3>
+            <p class="work-desc">Consulted for a military-sector organisation on strategic communication — covering full communications audit, messaging architecture, and go-to-market consultancy.</p>
+            <div class="work-tags"><span class="work-tag">Communication Strategy</span><span class="work-tag">Audit</span><span class="work-tag">Consultancy</span></div>
+          </div>
         </div>
 
-        <div class="work-item">
+        <a class="work-item" href="https://glami.cz/" target="_blank" rel="noopener">
           <div class="work-img-wrap" style="background:#1a0a2e;position:relative;">
-            <img src="work-glami.jpg" alt="GLAMI" style="position:absolute;width:75%;border-radius:4px;top:8%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
-            <img src="work-glami-2.jpg" alt="GLAMI 2" style="position:absolute;width:75%;border-radius:4px;top:30%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
+            <img src="work-glami.jpg" alt="GLAMI" style="position:absolute;width:75%;border-radius:8px;top:8%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
+            <img src="work-glami-2.jpg" alt="GLAMI 2" style="position:absolute;width:75%;border-radius:8px;top:30%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
             <span class="work-num">02</span>
           </div>
-          <h3 class="work-title">GLAMI Group</h3>
-          <p class="work-desc">Driving market expansion across CEE, Balkans, and Baltics as Business Development Lead at GLAMI Group — Europe's leading fashion search engine with 30M+ monthly users.</p>
-        </div>
+          <div style="padding:.25rem 0">
+            <h3 class="work-title">GLAMI Group</h3>
+            <p class="work-desc">Driving market expansion across CEE, Balkans, and Baltics as Business Development Lead at GLAMI Group — Europe's leading fashion search engine with 30M+ monthly users.</p>
+            <span class="work-link">View project →</span>
+          </div>
+        </a>
 
-        <div class="work-item">
+        <a class="work-item" href="https://arcetix.com/" target="_blank" rel="noopener">
           <div class="work-img-wrap" style="background:#0c1445;">
             <img src="work-arcetix.jpg" alt="Arcetix" style="width:100%;height:100%;object-fit:cover;">
             <span class="work-num">03</span>
           </div>
-          <h3 class="work-title">Arcetix</h3>
-          <p class="work-desc">Co-founded and led strategy at Arcetix — a QA automation hub for product teams. After 6 months in the UpSteer Incubator by Asseco Central Europe, validated with 20+ pilot partners.</p>
-        </div>
+          <div style="padding:.25rem 0">
+            <h3 class="work-title">Arcetix</h3>
+            <p class="work-desc">Co-founded and led strategy at Arcetix — a QA automation hub for product teams. After 6 months in the UpSteer Incubator by Asseco Central Europe, validated with 20+ pilot partners.</p>
+            <span class="work-link">View project →</span>
+          </div>
+        </a>
 
-        <div class="work-item">
+        <a class="work-item" href="https://www.flexdog.com/" target="_blank" rel="noopener">
           <div class="work-img-wrap" style="background:#0f0f0f;position:relative;">
-            <img src="work-flexdog.jpg" alt="FLEXDOG" style="position:absolute;width:75%;border-radius:4px;top:8%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
-            <img src="work-flexdog-2.jpg" alt="FLEXDOG 2" style="position:absolute;width:75%;border-radius:4px;top:30%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
+            <img src="work-flexdog.jpg" alt="FLEXDOG" style="position:absolute;width:75%;border-radius:8px;top:8%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
+            <img src="work-flexdog-2.jpg" alt="FLEXDOG 2" style="position:absolute;width:75%;border-radius:8px;top:30%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
             <span class="work-num">04</span>
           </div>
-          <h3 class="work-title">FLEXDOG</h3>
-          <p class="work-desc">Led brand partnerships and sales at FLEXDOG, the leading sneaker &amp; streetwear search engine in CEE. Built and scaled commercial relationships with top global brands across the region.</p>
-        </div>
+          <div style="padding:.25rem 0">
+            <h3 class="work-title">FLEXDOG</h3>
+            <p class="work-desc">Led brand partnerships and sales at FLEXDOG, the leading sneaker &amp; streetwear search engine in CEE. Built and scaled commercial relationships with top global brands across the region.</p>
+            <span class="work-link">View project →</span>
+          </div>
+        </a>
 
-        <div class="work-item">
+        <a class="work-item" href="https://levankezua.com/httpool" target="_blank" rel="noopener">
           <div class="work-img-wrap" style="background:#1a0000;position:relative;">
-            <img src="httpool-main.jpg" alt="Httpool" style="position:absolute;width:75%;border-radius:4px;top:8%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
-            <img src="httpool-1.jpg" alt="Httpool event" style="position:absolute;width:68%;border-radius:4px;top:30%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
+            <img src="httpool-main.jpg" alt="Httpool" style="position:absolute;width:75%;border-radius:8px;top:8%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
+            <img src="httpool-1.jpg" alt="Httpool event" style="position:absolute;width:68%;border-radius:8px;top:30%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
             <span class="work-num">05</span>
           </div>
-          <h3 class="work-title">Httpool by Aleph</h3>
-          <p class="work-desc">Led Central European TikTok Ads sales as Regional Client Partner Lead, driving full-funnel revenue across CZ/SK/HU with a team of 5. Speaker at industry events on TikTok advertising strategy.</p>
-        </div>
+          <div style="padding:.25rem 0">
+            <h3 class="work-title">Httpool by Aleph</h3>
+            <p class="work-desc">Led Central European TikTok Ads sales as Regional Client Partner Lead, driving full-funnel revenue across CZ/SK/HU with a team of 5. Speaker at industry events on TikTok advertising strategy.</p>
+            <span class="work-link">View projects →</span>
+          </div>
+        </a>
 
-        <div class="work-item">
+        <a class="work-item" href="https://footshop.com/" target="_blank" rel="noopener">
           <div class="work-img-wrap" style="background:#1a0a00;position:relative;">
-            <img src="work-footshop.jpg" alt="Footshop" style="position:absolute;width:72%;border-radius:4px;top:6%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
-            <img src="work-footshop-2.jpg" alt="Footshop 2" style="position:absolute;width:72%;border-radius:4px;top:26%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
+            <img src="work-footshop.jpg" alt="Footshop" style="position:absolute;width:72%;border-radius:8px;top:6%;left:0;box-shadow:0 12px 32px rgba(0,0,0,.4);">
+            <img src="work-footshop-2.jpg" alt="Footshop 2" style="position:absolute;width:72%;border-radius:8px;top:26%;right:0;box-shadow:0 16px 48px rgba(0,0,0,.5);">
             <span class="work-num">06</span>
           </div>
-          <h3 class="work-title">Footshop</h3>
-          <p class="work-desc">Led a team of 7+ social media specialists at Footshop, one of Europe's leading sneaker retailers. Built and executed a full social strategy across Facebook, Instagram, TikTok, YouTube, and Influencers.</p>
-        </div>
+          <div style="padding:.25rem 0">
+            <h3 class="work-title">Footshop</h3>
+            <p class="work-desc">Led a team of 7+ social media specialists at Footshop, one of Europe's leading sneaker retailers. Built and executed a full social strategy across Facebook, Instagram, TikTok, YouTube, and Influencers.</p>
+            <span class="work-link">View project →</span>
+          </div>
+        </a>
 
       </div>
     </div>
