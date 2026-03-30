@@ -112,16 +112,25 @@
     .nav-dropdown {
       display: none;
       position: absolute;
-      top: calc(100% + 12px);
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 6px;
       box-shadow: 0 8px 24px rgba(0,0,0,.1);
-      min-width: 200px;
+      min-width: 220px;
       padding: .4rem 0;
       z-index: 200;
+      padding-top: 12px;
+    }
+
+    .nav-dropdown::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0; right: 0;
+      height: 12px;
     }
 
     .nav-links li:hover .nav-dropdown { display: block; }
@@ -1073,6 +1082,10 @@
           <a href="fractional-cso.html">Services</a>
           <div class="nav-dropdown">
             <a href="fractional-cso.html">Fractional CSO</a>
+            <a href="fractional-cso.html#sales-strategy">Sales Strategy &amp; Advisory</a>
+            <a href="fractional-cso.html#market-expansion">Market Expansion (CEE)</a>
+            <a href="fractional-cso.html#partnerships">Partnership Development</a>
+            <a href="fractional-cso.html#gtm">Go-to-Market Consulting</a>
           </div>
         </li>
         <li><a href="#contact">Contact</a></li>
