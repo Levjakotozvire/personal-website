@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Levan Kezua — Business Development & Partnerships</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?display=swap&family=Nunito:200,300,400,500,600,700,800,900,200i,300i,400i,500i,600i,700i,800i,900i|Fjalla+One:400,400i&subset=all" rel="stylesheet" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7CTTK1KFV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P7CTTK1KFV');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #305c91;
+      --accent-dark: #1e3f6b;
+      --text: #222;
+      --muted: #666;
+      --border: #e5e8ed;
+      --bg-light: #f7f9fc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Fjalla One', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--accent-dark); }
+
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+      display: flex; align-items: center;
+    }
+
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+      width: 100%;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-weight: 400; font-size: .9rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span {
+      display: block; width: 24px; height: 2px;
+      background: var(--text); margin: 5px 0;
+      transition: transform .3s, opacity .3s;
+    }
+
+    .nav-lang {
+      position: absolute;
+      right: 2rem;
+      display: flex;
+      gap: .4rem;
+      align-items: center;
+    }
+
+    .nav-lang a {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: .2rem .45rem;
+      border: 1px solid transparent;
+      transition: color .2s, border-color .2s;
+    }
+
+    .nav-lang a:hover { color: var(--accent); }
+    .nav-lang a.active { color: var(--accent); border-color: var(--accent); }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 120px 8vw 80px 4vw;
+    }
+
+    .hero-inner { width: 100%; }
+
+    .hero-text { max-width: 55%; }
+
+    .hero-intro {
+      font-family: 'Nunito';
+      font-size: 19px;
+      color: #69757d;
+      font-weight: 400;
+      line-height: 22.8px;
+      margin-bottom: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero-text h1 {
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 1.25;
+      color: #212529;
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+
+    .hero-text h1 span { color: var(--accent); }
+
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      padding: 0 50px;
+      border: 1px solid #212529;
+      border-radius: 0;
+      background: transparent;
+      color: #212529;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .2s, border-color .2s;
+      text-decoration: none;
+    }
+
+    .btn-hero:hover { color: #69757d; border-color: #69757d; }
+
+    /* ── SECTIONS ─────────────────────────────────────────── */
+    section { padding: 90px 2rem; }
+
+    #about { background: #fff; }
+    #work  { background: #f5f5f5; }
+
+    .brands-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .brands-track {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      animation: brands-scroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .brands-track span {
+      font-size: 15px;
+      font-weight: 700;
+      color: #b0b8c1;
+      letter-spacing: .04em;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    @keyframes brands-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    /* ── ABOUT ────────────────────────────────────────────── */
+    .about-centered {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .about-centered p { color: var(--muted); margin-bottom: 1.2rem; font-size: 19px; }
+
+    /* ── WORK (EXPERIENCE + SKILLS merged) ───────────────── */
+    .se-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .se-underline {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: left .3s cubic-bezier(.4,0,.2,1), width .3s cubic-bezier(.4,0,.2,1);
+      z-index: 1;
+    }
+
+    .se-tab {
+      background: none;
+      border: none;
+      padding: .6rem 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color .2s;
+    }
+
+    .se-tab:hover { color: var(--text); }
+    .se-tab.active { color: var(--accent); }
+
+    .se-panel { display: none; }
+    .se-panel.active { display: block; }
+
+    .skills-tabs { display: flex; gap: .5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+
+    .tab-btn {
+      padding: .5rem 1.25rem;
+      border: 2px solid var(--border);
+      background: #fff;
+      border-radius: 4px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: .85rem;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--muted);
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(48,92,145,.06);
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .skills-grid { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+    .skill-tag {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: .6rem 1.2rem;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text);
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      transition: all .2s;
+    }
+
+    .skill-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ── EXPERIENCE ───────────────────────────────────────── */
+    .exp-layout {
+      display: flex;
+      gap: 0;
+      min-height: 360px;
+    }
+
+    .exp-sidebar {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      width: 188px;
+      border-right: 2px solid var(--accent);
+      position: relative;
+    }
+
+    .exp-tab {
+      background: none;
+      border: none;
+      padding: 20px 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .exp-tab::after {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      right: 0;
+      height: 2px;
+      background: #fff;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform .45s cubic-bezier(.39, 0, .45, 1), background .45s cubic-bezier(.39, 0, .45, 1);
+    }
+
+    .exp-tab.active::after {
+      background: var(--accent);
+      transform: scaleX(1);
+    }
+
+    .exp-logo {
+      height: 36px;
+      width: auto;
+      max-width: 150px;
+      display: block;
+    }
+
+    .exp-detail {
+      flex: 1;
+      padding: 0 2.5rem;
+    }
+
+    .exp-panel { display: none; }
+    .exp-panel.active { display: block; }
+
+    .exp-role {
+      font-family: 'Nunito', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.1rem;
+      line-height: 1.3;
+    }
+
+    .exp-company-link {
+      font-size: inherit;
+      font-weight: inherit;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .exp-company-link:hover { text-decoration: underline; }
+
+    .exp-date {
+      font-size: 17px;
+      color: var(--text);
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 1.6rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .exp-panel ul {
+      padding-left: 1.25rem;
+      color: var(--text);
+      margin-top: 0;
+    }
+
+    .exp-panel li {
+      margin-bottom: 0;
+      font-size: 17px;
+      line-height: 34px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .exp-highlights-label {
+      font-size: 17px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--text);
+      white-space: nowrap;
+      margin-right: 5px;
+      line-height: 34px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .exp-highlights {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px 5px;
+      margin-top: 1.4rem;
+      border-left: 3px solid transparent;
+      border-image: linear-gradient(to bottom, var(--accent), transparent) 1;
+      padding-left: 1rem;
+      padding-top: .3rem;
+      padding-bottom: .3rem;
+    }
+
+    .exp-highlights li {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      background: none;
+      border: none;
+      padding: 0;
+      line-height: 34px;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      margin-bottom: 0;
+    }
+
+    .exp-highlights li + li::before { content: ' · '; color: var(--muted); }
+
+    .exp-httpool-links {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      margin-top: 1.4rem;
+      border-left: 3px solid transparent;
+      border-image: linear-gradient(to bottom, var(--accent), transparent) 1;
+      padding-left: 1rem;
+      padding-top: .3rem;
+      padding-bottom: .3rem;
+    }
+
+    .exp-httpool-links a {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--accent);
+      text-decoration: none;
+      line-height: 34px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .exp-httpool-links a:hover { text-decoration: underline; }
+
+    .exp-httpool-cat {
+      font-size: 17px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 34px;
+      -webkit-font-smoothing: antialiased;
+      margin-top: .4rem;
+    }
+
+    .exp-httpool-cat:first-child { margin-top: 0; }
+
+    .exp-skills {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px 5px;
+      margin-top: 1.8rem;
+    }
+
+    .exp-skills-label {
+      font-size: 17px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--text);
+      white-space: nowrap;
+      margin-right: 5px;
+      line-height: 34px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .exp-skill {
+      font-size: 17px;
+      font-weight: 400;
+      color: #284c77;
+      background: #b7cde7;
+      border: none;
+      border-radius: 0;
+      padding: 2px 8px;
+      line-height: 34px;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media (max-width: 768px) {
+      .exp-layout { flex-direction: column; }
+      .exp-sidebar { flex-direction: row; flex-wrap: wrap; width: 100%; border-right: none; border-bottom: 2px solid var(--border); gap: .25rem; padding-bottom: .5rem; }
+      .exp-tab { padding: .6rem .75rem; }
+      .exp-detail { padding: 1.5rem 0 0; }
+    }
+
+    /* ── PORTFOLIO ───────────────────────────────────────── */
+    .portfolio-items {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .portfolio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+    }
+
+    .portfolio-img-wrap {
+      flex: 0 0 58%;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      position: relative;
+    }
+
+    .portfolio-img {
+      width: 90%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.35);
+      position: relative;
+      z-index: 1;
+    }
+
+    .portfolio-info { flex: 1; padding-top: 8px; }
+
+    .portfolio-title {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #212529;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-desc {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .portfolio-link:hover { text-decoration: underline; }
+
+    .portfolio-tools {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+
+    .portfolio-tools li {
+      font-size: 13px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: .25rem .85rem;
+      line-height: 1.6;
+      white-space: nowrap;
+    }
+
+    /* ── TESTIMONIALS ─────────────────────────────────────── */
+    .testimonials-section {
+      background: #f5f5f5;
+      padding: 90px 2rem;
+      text-align: center;
+    }
+
+    .testimonials-heading {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: .12em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .ts-dots {
+      display: flex;
+      justify-content: center;
+      gap: .5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .ts-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,0,0,.2);
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      transition: background .2s;
+    }
+
+    .ts-dot.active { background: var(--accent); border-color: var(--accent); }
+
+    .ts-slider { max-width: 760px; margin: 0 auto; }
+
+    .ts-slide { display: none; }
+    .ts-slide.active { display: block; }
+
+    .ts-slide p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .ts-author {
+      margin-top: 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .ts-slide strong { color: var(--text); }
+
+    /* ── CONTACT ──────────────────────────────────────────── */
+    #contact { background: #fff; color: var(--text); }
+
+    .contact-headline {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      text-align: center;
+      margin-bottom: 3rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      align-items: start;
+      max-width: 800px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid #c8cdd3;
+      padding: 1.6rem;
+    }
+
+    .cf-block {
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cf-block:last-of-type { border-bottom: none; }
+
+    .cf-label {
+      font-family: 'Fjalla One', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 0;
+      margin-bottom: 8px;
+      display: block;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .cf-hint {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: .75rem;
+      display: block;
+      line-height: 1.5;
+    }
+
+    .cf-select {
+      width: 100%;
+      padding: .55rem .9rem;
+      border: 1px solid #c8cdd3;
+      border-radius: 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      background: #fff;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .9rem center;
+      cursor: pointer;
+    }
+
+    .cf-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+    .cf-chip {
+      padding: .4rem .9rem;
+      border: 1px solid #c8cdd3;
+      border-radius: 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      background: #dce8f5;
+      color: var(--text);
+      border-color: #dce8f5;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .cf-chip.active {
+      background: #b7cde7;
+      color: #284c77;
+      border-color: #b7cde7;
+    }
+
+    .cf-input, .cf-textarea {
+      width: 100%;
+      padding: .55rem .9rem;
+      border: 1px solid #c8cdd3;
+      border-radius: 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .cf-input:focus, .cf-textarea:focus, .cf-select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .cf-textarea { min-height: 120px; resize: vertical; }
+
+    .cf-submit {
+      align-self: stretch;
+      width: 100%;
+      margin-top: 1.4rem;
+      padding: 1rem 2.4rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-family: 'Nunito', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 34px;
+      cursor: pointer;
+      -webkit-font-smoothing: antialiased;
+      transition: background .2s;
+    }
+
+    .cf-submit:hover { background: var(--accent-dark); }
+
+    .contact-sidebar { display: flex; flex-direction: column; gap: 2rem; }
+
+    .cs-label {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .4rem;
+    }
+
+    .cs-value { font-size: 16px; color: var(--text); }
+    .cs-value a { color: var(--text); text-decoration: none; }
+    .cs-value a:hover { color: var(--accent); }
+
+    /* ── FOOTER ───────────────────────────────────────────── */
+    footer {
+      background: #111;
+      color: rgba(255,255,255,.4);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: .82rem;
+    }
+
+    /* ── MOBILE ───────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fff; padding: 1rem 2rem; border-bottom: 1px solid var(--border); gap: 1rem; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .hero-text { max-width: 100%; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">O mně</a></li>
+        <li><a href="#work">Zkušenosti</a></li>
+        <li><a href="#testimonials">Reference</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-lang">
+        <a href="index.html">EN</a>
+        <span style="color:var(--border)">|</span>
+        <a href="index-cz.html" class="active">CZ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-intro">Ahoj, jmenuji se Levan Kezua</p>
+        <h1>Řídím strategická partnerství a expanzi na trzích v regionu CEE a dále</h1>
+        <div class="hero-ctas">
+          <a href="#work" class="btn-hero">Zjistit více</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS STRIP -->
+  <div class="brands-strip">
+    <div class="brands-track">
+      <span>TikTok</span>
+      <span>Amazon</span>
+      <span>Snapchat</span>
+      <span>Nokian Tyres</span>
+      <span>Mastercard</span>
+      <span>UniCredit Bank</span>
+      <span>ING</span>
+      <span>Air Bank</span>
+      <span>L'Oréal</span>
+      <span>TikTok</span>
+      <span>Amazon</span>
+      <span>Snapchat</span>
+      <span>Nokian Tyres</span>
+      <span>Mastercard</span>
+      <span>UniCredit Bank</span>
+      <span>ING</span>
+      <span>Air Bank</span>
+      <span>L'Oréal</span>
+    </div>
+  </div>
+
+  <!-- O MNĚ -->
+  <section id="about">
+    <div class="section-inner">
+      <h2 style="font-family:'Fjalla One';font-size:35px;font-weight:400;-webkit-font-smoothing:antialiased;margin-bottom:24px;text-align:center;text-transform:uppercase">O mně</h2>
+      <div class="about-centered">
+        <p>
+          Jsem profesionál v oblasti Business Development se sídlem v Praze s 10+ lety zkušeností
+          v performance marketingu, brandových partnerstvích a strategickém prodeji. Pracoval jsem
+          s globálními značkami, rychle rostoucími startupy a vším mezi tím — od globálních
+          reklamních sítí po niche e-commerce platformy.
+        </p>
+        <p>
+          Aktuálně rozvíjím trhy v regionu CEE, Balkán a Pobaltí jako BD Lead ve <strong>GLAMI Group</strong>
+          a spoluzakládám <strong>Arcetix</strong> jako Chief Strategy Officer. Moje vášeň leží v budování
+          hodnotných partnerství a přeměně ambiciózních růstových cílů na reálné výsledky.
+        </p>
+        <p>
+          Daří se mi na průsečíku strategie a exekuce — ať už to znamená vedení týmu, uzavírání
+          enterprise dealů nebo vstup na nové trhy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZKUŠENOSTI + DOVEDNOSTI -->
+  <section id="work">
+    <div class="section-inner">
+
+      <div class="se-tabs">
+        <button class="se-tab active" data-se="experience">Zkušenosti</button>
+        <button class="se-tab" data-se="skills">Dovednosti</button>
+        <button class="se-tab" data-se="techstack">Tech Stack</button>
+        <div class="se-underline"></div>
+      </div>
+
+      <!-- ZKUŠENOSTI panel -->
+      <div class="se-panel active" id="se-experience">
+      <div class="exp-layout">
+
+        <div class="exp-sidebar">
+          <button class="exp-tab active" data-exp="glami" title="GLAMI Group">
+            <img class="exp-logo" src="logos/glami.svg" alt="GLAMI">
+          </button>
+          <button class="exp-tab" data-exp="arcetix" title="Arcetix">
+            <img class="exp-logo" src="logos/arcetix.svg" alt="Arcetix">
+          </button>
+          <button class="exp-tab" data-exp="flexdog" title="FLEXDOG">
+            <img class="exp-logo" src="logos/flexdog.png" alt="FLEXDOG">
+          </button>
+          <button class="exp-tab" data-exp="httpool" title="Httpool">
+            <img class="exp-logo" src="logos/httpool.svg" alt="Httpool / Aleph">
+          </button>
+          <button class="exp-tab" data-exp="footshop" title="Footshop">
+            <img class="exp-logo" src="logos/footshop.png" alt="Footshop" style="mix-blend-mode:multiply;height:60px;">
+          </button>
+          <button class="exp-tab" data-exp="mccann" title="McCann Prague">
+            <img class="exp-logo" src="logos/mccann.png" alt="McCann" style="mix-blend-mode:multiply;height:36px;">
+          </button>
+          <button class="exp-tab" data-exp="socialsharks" title="Socialsharks">
+            <img class="exp-logo" src="logos/socialsharks.png" alt="Socialsharks">
+          </button>
+        </div>
+
+        <div class="exp-detail">
+
+          <div class="exp-panel active" id="exp-glami">
+            <h3 class="exp-role">Business Development Lead <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://glami.cz" target="_blank" rel="noopener">GLAMI Group</a></h3>
+            <p class="exp-date">Prosinec 2025 – současnost</p>
+            <ul>
+              <li>Rozvíjení a škálování trhů v regionu CEE, Balkán a Pobaltí.</li>
+              <li>Řízení strategických partnerství a regionálních růstových iniciativ napříč odvětvími.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">Business Development</span><span class="exp-skill">Expanze na trhy</span><span class="exp-skill">Strategická partnerství</span><span class="exp-skill">CEE / Balkán / Pobaltí</span><span class="exp-skill">B2B Prodej</span><span class="exp-skill">Fashion Tech</span>
+            </div>
+            <div class="exp-highlights"><span class="exp-highlights-label">Úspěchy:</span>
+              <li>Business Development Lead</li>
+              <li>Expanze CEE, Balkán &amp; Pobaltí</li>
+              <li>Strategická partnerství</li>
+              <li>Platforma s 30M+ měsíčními uživateli</li>
+            </div>
+          </div>
+
+          <div class="exp-panel" id="exp-arcetix">
+            <h3 class="exp-role">Co-Founder &amp; CSO <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://arcetix.com" target="_blank" rel="noopener">Arcetix</a></h3>
+            <p class="exp-date">Červenec 2025 – současnost</p>
+            <ul>
+              <li>Spoluzaložil jsem Arcetix a vedu společnost jako Chief Strategy Officer.</li>
+              <li>Formování go-to-market strategie, rozvoj partnerství a dlouhodobé vize.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">Go-to-Market Strategie</span><span class="exp-skill">Startup Leadership</span><span class="exp-skill">SaaS</span><span class="exp-skill">QA Automatizace</span><span class="exp-skill">Rozvoj partnerů</span><span class="exp-skill">Investor Relations</span>
+            </div>
+            <div class="exp-highlights"><span class="exp-highlights-label">Úspěchy:</span>
+              <li>UpSteer 2025 Inkubátor — Asseco Central Europe</li>
+              <li>20+ pilotních partnerů</li>
+              <li>QA Automation SaaS</li>
+              <li>Co-Founder &amp; CSO</li>
+            </div>
+          </div>
+
+          <div class="exp-panel" id="exp-flexdog">
+            <h3 class="exp-role">Head of Brand Partnerships &amp; Sales <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://www.flexdog.com" target="_blank" rel="noopener">FLEXDOG</a></h3>
+            <p class="exp-date">Červenec 2024 – Listopad 2025</p>
+            <ul>
+              <li>Vedl jsem brandové partnerství a obchod ve 12 trzích pro curated sneaker &amp; streetwear marketplace.</li>
+              <li>Dosáhl 126 % cílů vendor marketingu v Q1 2025.</li>
+              <li>Onboardoval 10 klíčových partnerů v Polsku a Rumunsku.</li>
+              <li>Plánoval a realizoval expanzi na Balkán, Nordics a Pobaltí.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">Brandová partnerství</span><span class="exp-skill">Komerční prodej</span><span class="exp-skill">Expanze CEE</span><span class="exp-skill">Sneaker & Streetwear</span><span class="exp-skill">Account Management</span><span class="exp-skill">Růst výnosů</span>
+            </div>
+            <div class="exp-highlights"><span class="exp-highlights-label">Úspěchy:</span>
+              <li>Head of Brand Partnerships &amp; Sales</li>
+              <li>Expanze na trhy CEE</li>
+              <li>Sneaker &amp; streetwear vertikál</li>
+              <li>Brandové &amp; performance kampaně</li>
+            </div>
+          </div>
+
+          <div class="exp-panel" id="exp-httpool">
+            <h3 class="exp-role">Regional Client Partner Lead, Střední Evropa <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://www.alephholding.com" target="_blank" rel="noopener">Httpool by Aleph</a></h3>
+            <p class="exp-date">Listopad 2021 – Červen 2024</p>
+            <ul>
+              <li>Vedl tým 5 lidí v oblasti prodeje TikTok Ads (full-funnel) pro region CZ/SK/HU.</li>
+              <li>Spravoval produktové portfolio TikTok reklamy pro Střední Evropu, včetně Snapchatu.</li>
+              <li>Podporoval agentury a korporáty, opakovaně překračoval čtvrtletní prodejní cíle.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">TikTok Ads</span><span class="exp-skill">Snapchat Ads</span><span class="exp-skill">Performance Marketing</span><span class="exp-skill">Sales Leadership</span><span class="exp-skill">Full-funnel Strategie</span><span class="exp-skill">Agency Relations</span>
+            </div>
+            <div class="exp-httpool-links">
+              <span class="exp-httpool-cat">Video</span>
+              <a href="https://www.youtube.com/watch?v=s5M8J7Bsc8E" target="_blank" rel="noopener">→TikTok jako reklamní platforma <span style="color:var(--muted)">(Květen 2022)</span></a>
+              <a href="https://www.youtube.com/watch?v=jPeB1WS6j-U" target="_blank" rel="noopener">→Jak budovat značku na sociálních sítích <span style="color:var(--muted)">(Únor 2023)</span></a>
+              <span class="exp-httpool-cat">Články</span>
+              <a href="https://www.visibility.cz/tiktok-zarucuje-levnejsi-zasah-nez-klasicke-socialni-site/" target="_blank" rel="noopener">→visibility.cz — TikTok zaručuje levnější zásah než klasické sociální sítě <span style="color:var(--muted)">(Únor 2023)</span></a>
+              <a href="https://forbes.cz/novy-hrac-na-trhu-s-reklamou-kampane-na-tiktoku-zazivaji-v-cesku-boom/" target="_blank" rel="noopener">→Forbes — Nový hráč na trhu s reklamou: kampaně na TikToku zažívají boom <span style="color:var(--muted)">(Leden 2023)</span></a>
+              <span class="exp-httpool-cat">Podcast</span>
+              <a href="https://open.spotify.com/episode/1kJU8YYE1r6CzXyRCUThYG" target="_blank" rel="noopener">→TikTok reklama v České republice <span style="color:var(--muted)">(Březen 2023)</span></a>
+            </div>
+          </div>
+
+          <div class="exp-panel" id="exp-footshop">
+            <h3 class="exp-role">Social Media Team Leader <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://footshop.com" target="_blank" rel="noopener">Footshop</a></h3>
+            <p class="exp-date">Únor 2020 – Říjen 2021</p>
+            <ul>
+              <li>Vedl tým 7+ specialistů na Facebooku, Instagramu, TikToku, YouTube a u influencerů.</li>
+              <li>Vyvinul komplexní sociální strategii s důrazem na brand awareness, engagement a prodej.</li>
+              <li>Průběžně analyzoval klíčové metriky a optimalizoval kampaně pro udržení konkurenční výhody.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">Vedení týmu</span><span class="exp-skill">Strategie soc. sítí</span><span class="exp-skill">Facebook & Instagram</span><span class="exp-skill">TikTok</span><span class="exp-skill">Influencer Marketing</span><span class="exp-skill">KPI Management</span>
+            </div>
+            <div class="exp-highlights"><span class="exp-highlights-label">Úspěchy:</span>
+              <li>Social Media Team Leader</li>
+              <li>7+ specialistů napříč platformami</li>
+              <li>Brand awareness &amp; performance</li>
+              <li>Facebook, Instagram, TikTok, YouTube</li>
+            </div>
+          </div>
+
+          <div class="exp-panel" id="exp-mccann">
+            <h3 class="exp-role">Senior Social Media &amp; Advertising Manager <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://mccann.com" target="_blank" rel="noopener">McCann Prague</a></h3>
+            <p class="exp-date">Květen 2016 – Únor 2020</p>
+            <ul>
+              <li>Pracoval na globálních reklamních kampaních pro celosvětově uznávanou síť agentur.</li>
+              <li>Spravoval přítomnost na sociálních sítích v šesti zemích na Facebooku a Instagramu.</li>
+              <li>Vedl strategické plánování a realizaci na více trzích pro řadu klientů.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">Globální reklama</span><span class="exp-skill">Multi-market strategie</span><span class="exp-skill">Facebook & Instagram</span><span class="exp-skill">Nokian Tyres</span><span class="exp-skill">Brand Management</span><span class="exp-skill">Agentura</span>
+            </div>
+            <div class="exp-highlights"><span class="exp-highlights-label">Úspěchy:</span>
+              <li>Senior Social Media &amp; Advertising Manager</li>
+              <li>Nokian Tyres — klíčová spolupráce</li>
+              <li>Správa soc. sítí v 6 zemích</li>
+              <li>Facebook &amp; Instagram kampaně</li>
+              <li>Globální agenturní síť</li>
+            </div>
+          </div>
+
+          <div class="exp-panel" id="exp-socialsharks">
+            <h3 class="exp-role">Social Media Specialist <span style="font-weight:400">v</span> <a class="exp-company-link" href="https://www.socialsharks.cz/" target="_blank" rel="noopener">Socialsharks</a></h3>
+            <p class="exp-date">Září 2014 – Duben 2016</p>
+            <ul>
+              <li>Realizoval plány obsahu na Facebooku, Instagramu a VKontakte.</li>
+              <li>Vytvářel týdenní a měsíční výkonnostní reporty s klíčovými metrikami.</li>
+              <li>Aktivně přispíval k rozvoji nového businessu a růstu agentury.</li>
+            </ul>
+            <div class="exp-skills"><span class="exp-skills-label">Klíčové dovednosti:</span>
+              <span class="exp-skill">Sociální sítě</span><span class="exp-skill">Obsahová strategie</span><span class="exp-skill">Facebook & Instagram</span><span class="exp-skill">VKontakte</span><span class="exp-skill">Reporting & Analytics</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div><!-- /se-panel experience -->
+
+      <!-- DOVEDNOSTI panel -->
+      <div class="se-panel" id="se-skills">
+        <div class="skills-tabs">
+          <button class="tab-btn active" data-tab="bd">Business Development</button>
+          <button class="tab-btn" data-tab="marketing">Marketing</button>
+          <button class="tab-btn" data-tab="leadership">Leadership</button>
+          <button class="tab-btn" data-tab="platforms">Platformy & Nástroje</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-bd">
+          <div class="skills-grid">
+            <span class="skill-tag">Strategická partnerství</span>
+            <span class="skill-tag">Expanze na trhy</span>
+            <span class="skill-tag">B2B Prodej</span>
+            <span class="skill-tag">Affiliate Marketing</span>
+            <span class="skill-tag">Onboarding partnerů</span>
+            <span class="skill-tag">Růst výnosů</span>
+            <span class="skill-tag">Uzavírání dealů</span>
+            <span class="skill-tag">Account Management</span>
+            <span class="skill-tag">Trhy CEE</span>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-marketing">
+          <div class="skills-grid">
+            <span class="skill-tag">Performance Marketing</span>
+            <span class="skill-tag">Brandová partnerství</span>
+            <span class="skill-tag">Strategie soc. sítí</span>
+            <span class="skill-tag">Placená reklama</span>
+            <span class="skill-tag">Influencer Marketing</span>
+            <span class="skill-tag">Správa kampaní</span>
+            <span class="skill-tag">KPI Reporting</span>
+            <span class="skill-tag">TikTok Ads</span>
+            <span class="skill-tag">Meta Ads</span>
+            <span class="skill-tag">Snapchat Ads</span>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-leadership">
+          <div class="skills-grid">
+            <span class="skill-tag">Vedení týmu</span>
+            <span class="skill-tag">Strategické plánování</span>
+            <span class="skill-tag">Cross-funkční spolupráce</span>
+            <span class="skill-tag">Stakeholder Management</span>
+            <span class="skill-tag">Mentoring</span>
+            <span class="skill-tag">OKR &amp; Cíle</span>
+            <span class="skill-tag">Go-to-Market Strategie</span>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-platforms">
+          <div class="skills-grid">
+            <span class="skill-tag">TikTok for Business</span>
+            <span class="skill-tag">Snapchat Ads Manager</span>
+            <span class="skill-tag">Google Suite</span>
+            <span class="skill-tag">Meta Business Suite</span>
+            <span class="skill-tag">CRM nástroje</span>
+            <span class="skill-tag">Amazon Advertising</span>
+          </div>
+        </div>
+      </div><!-- /se-panel skills -->
+
+      <!-- TECH STACK panel -->
+      <div class="se-panel" id="se-techstack">
+        <div class="skills-grid">
+          <span class="skill-tag">TikTok for Business</span>
+          <span class="skill-tag">Meta Business Suite</span>
+          <span class="skill-tag">Snapchat Ads Manager</span>
+          <span class="skill-tag">Google Suite</span>
+          <span class="skill-tag">Amazon Advertising</span>
+          <span class="skill-tag">CRM nástroje</span>
+          <span class="skill-tag">LinkedIn Sales Navigator</span>
+          <span class="skill-tag">HubSpot</span>
+          <span class="skill-tag">Salesforce</span>
+          <span class="skill-tag">Notion</span>
+          <span class="skill-tag">Slack</span>
+          <span class="skill-tag">Looker Studio</span>
+        </div>
+      </div><!-- /se-panel techstack -->
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" style="background:#fff;padding:90px 2rem;">
+    <div class="section-inner">
+      <h2 style="font-family:'Fjalla One';font-size:35px;font-weight:400;color:#212529;text-transform:uppercase;text-align:center;-webkit-font-smoothing:antialiased;margin-bottom:48px;">Projekty</h2>
+
+      <div class="portfolio-items">
+
+        <!-- NDA Military -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:#0a1500;position:relative;overflow:hidden;padding:0;">
+            <img src="work-nda.jpg" alt="Důvěrné" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(8px) brightness(0.55);transform:scale(1.08);">
+            <div style="position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+              <p style="font-family:'Fjalla One',sans-serif;font-size:1.35rem;font-weight:400;color:#fff;line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:.02em;">Důvěrný projekt.<br>Chráněno smlouvou NDA.</p>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Neutajeno · NDA</h3>
+            <p class="portfolio-desc">Konzultoval jsem pro organizaci z vojenského sektoru v oblasti strategické komunikace — zahrnující kompletní komunikační audit, architekturu sdělení a go-to-market konzultaci.</p>
+            <ul class="portfolio-tools">
+              <li>Komunikační strategie</li>
+              <li>Audit</li>
+              <li>Konzultace</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- GLAMI -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:linear-gradient(135deg,#4a1d96,#7c3aed,#c026d3);position:relative;overflow:hidden;padding:0;">
+            <img src="work-glami.jpg" alt="GLAMI" style="position:absolute;width:80%;border-radius:8px;box-shadow:0 16px 40px rgba(0,0,0,.4);top:10%;left:0;z-index:1;">
+            <img src="work-glami-2.jpg" alt="GLAMI — Sport" style="position:absolute;width:80%;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.5);top:32%;right:0;z-index:2;">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">GLAMI Group</h3>
+            <p class="portfolio-desc">Rozvoj trhů v regionu CEE, Balkán a Pobaltí jako Business Development Lead ve GLAMI Group — předním evropském módním vyhledávači s 30M+ měsíčními uživateli.</p>
+            <a href="https://glami.cz" target="_blank" rel="noopener" class="portfolio-link">Zobrazit projekt ↗</a>
+          </div>
+        </div>
+
+        <!-- Arcetix -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:linear-gradient(135deg,#0c1445,#1e3a8a,#3b82f6)">
+            <img src="work-arcetix.jpg" alt="Arcetix — UpSteer 2025 Final Pitch" class="portfolio-img">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Arcetix</h3>
+            <p class="portfolio-desc">Spoluzaložil jsem a vedl strategii v Arcetix — centru pro QA automatizaci pro produktové týmy. Po 6 měsících v inkubátoru UpSteer od Asseco Central Europe jsme představili naši cestu od MVP ke komplexní automatizační platformě na finálním pitchi.</p>
+            <p class="portfolio-desc">Validováno s 20+ partnery, jejichž zpětná vazba tvarovala Arcetix do podoby, která skutečně odpovídá potřebám QA světa.</p>
+            <a href="https://arcetix.com" target="_blank" rel="noopener" class="portfolio-link">Zobrazit projekt ↗</a>
+          </div>
+        </div>
+
+        <!-- FLEXDOG -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:linear-gradient(135deg,#0f0f0f,#1c1c1c,#374151);position:relative;overflow:hidden;padding:0;">
+            <img src="work-flexdog.jpg" alt="FLEXDOG" style="position:absolute;width:80%;border-radius:8px;box-shadow:0 16px 40px rgba(0,0,0,.4);top:10%;left:0;z-index:1;">
+            <img src="work-flexdog-2.jpg" alt="FLEXDOG — Kategorie" style="position:absolute;width:80%;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.5);top:32%;right:0;z-index:2;">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">FLEXDOG</h3>
+            <p class="portfolio-desc">Vedl jsem brandová partnerství a prodej ve FLEXDOG — předním vyhledávači sneaker &amp; streetwear v CEE. Budoval a škáloval obchodní vztahy s předními globálními značkami napříč regionem.</p>
+            <a href="https://www.flexdog.com" target="_blank" rel="noopener" class="portfolio-link">Zobrazit projekt ↗</a>
+          </div>
+        </div>
+
+        <!-- Httpool -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:linear-gradient(135deg,#1a0000,#EE1D52,#EE1D52);position:relative;overflow:hidden;padding:0;">
+            <img src="httpool-main.jpg" alt="Levan Kezua — TikTok CEE" style="position:absolute;width:80%;border-radius:8px;box-shadow:0 16px 40px rgba(0,0,0,.4);top:10%;left:0;z-index:1;">
+            <img src="httpool-1.jpg" alt="Httpool event" style="position:absolute;width:72%;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.5);top:32%;right:0;z-index:2;">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Httpool by Aleph</h3>
+            <p class="portfolio-desc">Vedl jsem prodej TikTok Ads pro Střední Evropu jako Regional Client Partner Lead, řídil full-funnel revenue pro CZ/SK/HU s týmem 5 lidí. Přednášel na oborových akcích o strategii TikTok reklamy.</p>
+            <a href="httpool.html" class="portfolio-link">Zobrazit projekty ↗</a>
+          </div>
+        </div>
+
+        <!-- Footshop -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:linear-gradient(135deg,#1a0a00,#92400e,#f97316);position:relative;overflow:hidden;padding:0;">
+            <img src="work-footshop.jpg" alt="Footshop" style="position:absolute;width:72%;border-radius:8px;box-shadow:0 16px 40px rgba(0,0,0,.4);top:8%;left:0;z-index:1;">
+            <img src="work-footshop-2.jpg" alt="Footshop Instagram" style="position:absolute;width:72%;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.5);top:26%;right:0;z-index:2;">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Footshop</h3>
+            <p class="portfolio-desc">Vedl jsem tým 7+ specialistů na sociální sítě ve Footshop, jednom z předních evropských prodejců sneaker. Budoval a realizoval komplexní sociální strategii na Facebooku, Instagramu, TikToku, YouTube a u influencerů.</p>
+            <a href="https://footshop.com" target="_blank" rel="noopener" class="portfolio-link">Zobrazit projekt ↗</a>
+          </div>
+        </div>
+
+        <!-- McCann Prague -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap" style="background:linear-gradient(135deg,#0d1f00,#2a5200,#78be20);position:relative;overflow:hidden;padding:0;">
+            <img src="work-mccann-2.png" alt="Nokian Tyres" style="position:absolute;width:90%;height:90%;object-fit:cover;top:5%;left:5%;">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">McCann Prague</h3>
+            <p class="portfolio-desc">Senior Social Media &amp; Advertising Manager v jedné z nejznámějších agenturních sítí světa. Spravoval multi-market kampaně v šesti zemích, včetně klíčové spolupráce s Nokian Tyres.</p>
+            <a href="https://mccann.com" target="_blank" rel="noopener" class="portfolio-link">Zobrazit projekt ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCE -->
+  <section id="testimonials" class="testimonials-section">
+    <h2 class="testimonials-heading">CO O MNĚ ŘÍKAJÍ LIDÉ</h2>
+
+    <div class="ts-dots">
+      <button class="ts-dot active" data-index="0"></button>
+      <button class="ts-dot" data-index="1"></button>
+      <button class="ts-dot" data-index="2"></button>
+    </div>
+
+    <div class="ts-slider">
+
+      <div class="ts-slide active">
+        <p>Měla jsem příležitost pracovat s Levanem téměř 1,5 roku, jak jako jeho přímý podřízený, tak jako kolega. Existují zásadní manažerské dovednosti — podporovat místo kontrolovat a slavit úspěchy podřízených místo soupeření s nimi. <strong>Levan tyto klíčové dovednosti má.</strong> Nemohu dostatečně zdůraznit, jak moc mě Levan podporoval na mé cestě — vždy viděl můj potenciál a pomáhal mi vidět celkový obraz.</p>
+        <p>Bude cenným přínosem pro jakýkoli tým, schopný ho i vést, díky svému přístupu orientovanému na lidi a komunikačním dovednostem. Vřele doporučuji.</p>
+        <div class="ts-author">Kateryna Vodolazka, AR&amp;XR &amp; SoMe Marketing at StoryTLRS</div>
+      </div>
+
+      <div class="ts-slide">
+        <p>Měl jsem příležitost pracovat v Levanově týmu rok a půl. Bylo velkou radostí pracovat s Levanem jak profesionálně, tak osobně.</p>
+        <p>Levan je <strong>výjimečný manažer</strong>, který důsledně prokazuje silné vůdčí kvality. Má skvělou schopnost motivovat svůj tým a efektivně sdělovat očekávání a cíle, což vedlo k vysoce angažovanému a motivovanému týmu. Pod Levanovým vedením náš tým opakovaně překračoval cíle při zachování velmi pozitivní pracovní kultury.</p>
+        <div class="ts-author">Emil Tlyashov, Fintech at Google</div>
+      </div>
+
+      <div class="ts-slide">
+        <p>Levan je výborný kolega s <strong>vynikajícími komunikačními a prezentačními dovednostmi</strong>. Je velmi pracovitý a vždy ví, co dělá. Jeho schopnost vést tým a motivovat ho je neocenitelná.</p>
+        <p>Levan je také velmi přátelský kolega, který vytváří uvolněnou a přívětivou atmosféru na pracovišti. Věřím, že vždy bude vynikajícím přínosem pro každý tým, ke kterému se připojí.</p>
+        <div class="ts-author">Monika Beranová, Senior Client Partner at Spotify &amp; Reddit</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="contact">
+    <div class="section-inner">
+      <h2 class="contact-headline">Hledáte lídra pro Business Development nebo Partnerství? Pojďme si promluvit.</h2>
+      <div class="contact-grid">
+
+        <form class="contact-form" action="https://formspree.io/f/mqegqpyp" method="POST">
+
+          <div class="cf-block">
+            <label class="cf-label">Jaký typ spolupráce potřebujete?</label>
+            <span class="cf-hint">To mi pomůže pochopit, jak vás mohu nejlépe podpořit.</span>
+            <select class="cf-select" name="engagement_type" required>
+              <option value="" disabled selected>Vyberte typ spolupráce ▾</option>
+              <option>Konzultace / Poradenství</option>
+              <option>Částečný úvazek / Frakční spolupráce</option>
+              <option>Přednáška / Moderování</option>
+              <option>Jiné</option>
+            </select>
+          </div>
+
+          <div class="cf-block">
+            <label class="cf-label">V jaké oblasti potřebujete pomoc?</label>
+            <span class="cf-hint">Vyberte vše, co se hodí.</span>
+            <div class="cf-chips">
+              <button type="button" class="cf-chip" onclick="toggleChip(this)">Business Development / Prodej</button>
+              <button type="button" class="cf-chip" onclick="toggleChip(this)">Tech Stack</button>
+              <button type="button" class="cf-chip" onclick="toggleChip(this)">Brandová partnerství</button>
+              <button type="button" class="cf-chip" onclick="toggleChip(this)">Strategie soc. sítí</button>
+              <button type="button" class="cf-chip" onclick="toggleChip(this)">GTM Strategie</button>
+              <button type="button" class="cf-chip" onclick="toggleChip(this)">Jiné</button>
+            </div>
+            <input type="hidden" name="services" id="servicesHidden">
+          </div>
+
+          <div class="cf-block">
+            <label class="cf-label">Jaký je váš rozpočet?</label>
+            <span class="cf-hint">To mi pomůže nasměrovat vás na nejvhodnější řešení. Berte to jako výchozí bod, nikoliv finální nabídku.</span>
+            <select class="cf-select" name="budget">
+              <option value="" disabled selected>Vyberte rozpočet ▾</option>
+              <option>Do €1 000</option>
+              <option>€1 000 – €5 000</option>
+              <option>€5 000 – €10 000</option>
+              <option>Domluvíme se</option>
+            </select>
+          </div>
+
+          <div class="cf-block">
+            <label class="cf-label">Celé jméno</label>
+            <input type="text" class="cf-input" name="name" required />
+          </div>
+
+          <div class="cf-block">
+            <label class="cf-label">E-mail</label>
+            <input type="email" class="cf-input" name="email" required />
+          </div>
+
+          <div class="cf-block" style="border-bottom:none">
+            <label class="cf-label">Zpráva <span style="font-weight:400;color:var(--muted)">(nepovinné)</span></label>
+            <textarea class="cf-textarea" name="message"></textarea>
+          </div>
+
+          <button type="submit" class="cf-submit">Odeslat</button>
+        </form>
+
+        <div class="contact-sidebar">
+          <div>
+            <p class="cs-label">E-mail</p>
+            <p class="cs-value"><a href="mailto:l.kezua@gmail.com">l.kezua@gmail.com</a></p>
+          </div>
+          <div>
+            <p class="cs-label">Spojte se</p>
+            <a href="https://www.linkedin.com/in/levankezua/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;color:var(--text);text-decoration:none;margin-top:.2rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Levan Kezua. Vytvořeno s péčí.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Experience tabs
+    document.querySelectorAll('.exp-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.exp-tab').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('exp-' + btn.dataset.exp).classList.add('active');
+      });
+    });
+
+    // SE tabs
+    const seTabs = document.querySelectorAll('.se-tab');
+    const seUnderline = document.querySelector('.se-underline');
+
+    function updateUnderline(tab) {
+      const rect = tab.getBoundingClientRect();
+      const parentRect = tab.parentElement.getBoundingClientRect();
+      seUnderline.style.left = (rect.left - parentRect.left) + 'px';
+      seUnderline.style.width = rect.width + 'px';
+    }
+
+    seTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        seTabs.forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.se-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('se-' + tab.dataset.se).classList.add('active');
+        updateUnderline(tab);
+      });
+    });
+
+    const activeSeTab = document.querySelector('.se-tab.active');
+    if (activeSeTab) setTimeout(() => updateUnderline(activeSeTab), 50);
+
+    // Skills sub-tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const parent = btn.closest('.se-panel');
+        parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        parent.querySelector('#tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Testimonials slider
+    const dots = document.querySelectorAll('.ts-dot');
+    const slides = document.querySelectorAll('.ts-slide');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const i = +dot.dataset.index;
+        dots.forEach(d => d.classList.remove('active'));
+        slides.forEach(s => s.classList.remove('active'));
+        dot.classList.add('active');
+        slides[i].classList.add('active');
+      });
+    });
+  </script>
+
+  <script>
+    function toggleChip(el) {
+      el.classList.toggle('active');
+      const selected = [...document.querySelectorAll('.cf-chip.active')].map(c => c.textContent).join(', ');
+      document.getElementById('servicesHidden').value = selected;
+    }
+  </script>
+
+</body>
+</html>
