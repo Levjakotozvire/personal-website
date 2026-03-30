@@ -93,6 +93,38 @@
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
     .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; }
 
+    /* DROPDOWN */
+    .nav-links li { position: relative; }
+
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+      min-width: 200px;
+      padding: .4rem 0;
+      z-index: 200;
+    }
+
+    .nav-links li:hover .nav-dropdown { display: block; }
+
+    .nav-dropdown a {
+      display: block;
+      padding: .6rem 1.2rem;
+      font-size: .85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown a:hover { color: var(--accent); background: var(--bg-light); }
+
     /* PAGE HERO */
     .page-hero {
       padding: 140px 2rem 80px;
@@ -415,6 +447,12 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#work">Experience</a></li>
         <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li>
+          <a href="#" class="active">Services</a>
+          <div class="nav-dropdown">
+            <a href="fractional-cso.html">Fractional CSO</a>
+          </div>
+        </li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
