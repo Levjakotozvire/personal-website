@@ -9,6 +9,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="service.css" />
+  <style>
+    .svc-list{list-style:none;padding:0;margin-top:2rem;border-top:1px solid var(--border)}
+    .svc-list li{border-bottom:1px solid var(--border)}
+    .svc-list li a{display:flex;align-items:baseline;justify-content:space-between;padding:1.4rem 0;text-decoration:none;color:var(--text);transition:color .2s;gap:2rem}
+    .svc-list li a:hover{color:var(--gold);opacity:1}
+    .svc-list li a:hover .svc-arrow{color:var(--gold)}
+    .svc-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.75rem);font-weight:400;line-height:1.2}
+    .svc-desc{font-size:.82rem;font-weight:300;color:var(--muted);max-width:380px;line-height:1.65;text-align:right}
+    .svc-arrow{font-size:.85rem;color:var(--muted);flex-shrink:0;transition:color .2s;margin-left:auto}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+    .how-item{}
+    .how-label{font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+    .how-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--text);margin-bottom:.5rem}
+    .how-body{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.75}
+    @media(max-width:768px){
+      .svc-list li a{flex-direction:column;gap:.4rem}
+      .svc-desc{text-align:left;max-width:100%}
+      .svc-arrow{display:none}
+      .how-grid{grid-template-columns:1fr}
+    }
+  </style>
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w3x8jxwo1a");</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7CTTK1KFV"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-P7CTTK1KFV');</script>
@@ -20,10 +41,8 @@
       <a href="index.html" class="nav-logo">LK</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#work">Experience</a></li>
-        <li><a href="index.html#testimonials">Testimonials</a></li>
         <li>
-          <a href="services.html" class="active">Services</a>
+          <a href="services.html">Services</a>
           <div class="nav-dropdown">
             <a href="fractional-cso.html">Fractional CSO</a>
             <a href="sales-strategy.html">Sales Strategy &amp; Advisory</a>
@@ -32,6 +51,8 @@
             <a href="go-to-market.html">Go-to-Market Consulting</a>
           </div>
         </li>
+        <li><a href="index.html#work">Experience</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -42,97 +63,81 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Levan Kezua</a><span>›</span> Services</div>
-      <h1>How I can help</h1>
-      <p class="lead">Senior commercial leadership on a fractional or project basis. I work with startups, scale-ups, and established businesses that need strategic execution — without the overhead of a full-time hire.</p>
-      <div class="tag-row">
-        <span class="tag">Fractional Leadership</span>
-        <span class="tag">Sales Strategy</span>
-        <span class="tag">Market Expansion</span>
-        <span class="tag">Partnership Development</span>
-        <span class="tag">Go-to-Market</span>
-        <span class="tag">CEE &amp; Beyond</span>
-      </div>
-      <a href="index.html#contact" class="btn-outline-dark">Work with me</a>
+      <h1>Services</h1>
+      <p class="lead">I work with startups, scale-ups, and established businesses that need senior commercial thinking — on a fractional or project basis, without the overhead of a full-time hire.</p>
     </div>
   </div>
 
   <div class="page-section">
     <div class="section-inner">
-      <p class="sec-label">Services</p>
-      <h2 class="sec-title">What I offer</h2>
+      <p class="sec-label">What I offer</p>
+      <h2 class="sec-title">How I can help</h2>
       <div class="prose">
-        <p>Not every company needs a full-time CSO or Head of Sales — but every growing company needs strategic commercial thinking. With 10+ years across performance marketing, brand partnerships, enterprise sales, and market expansion, I bring real operational experience, not just strategy decks.</p>
+        <p>With 10+ years across performance marketing, brand partnerships, enterprise sales, and market expansion in CEE and beyond, I bring real operational experience — not just strategy decks. Below are the specific areas I work in.</p>
       </div>
-      <div class="services-grid">
-        <div class="svc-card">
-          <div class="svc-icon">—</div>
-          <h3><a href="fractional-cso.html">Fractional CSO</a></h3>
-          <p>Part-time Chief Strategy Officer embedding into your leadership team. I shape your commercial direction and drive alignment across sales, BD, and marketing.</p>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">—</div>
-          <h3><a href="sales-strategy.html">Sales Strategy &amp; Advisory</a></h3>
-          <p>Build a high-performing sales function from the ground up. From pipeline architecture to team coaching and closing enterprise deals.</p>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">—</div>
-          <h3><a href="market-expansion.html">Market Expansion (CEE)</a></h3>
-          <p>Entering a new market? I've expanded into 12+ markets across CEE, Balkans, and Baltics. I map the landscape and build the local go-to-market playbook.</p>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">—</div>
-          <h3><a href="partnership-development.html">Partnership Development</a></h3>
-          <p>Identify, develop, and close high-value partnerships. I specialize in B2B deal-making across e-commerce, AdTech, SaaS, and retail.</p>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">—</div>
-          <h3><a href="go-to-market.html">Go-to-Market Consulting</a></h3>
-          <p>Launch new products or enter new verticals with a clear GTM plan — positioning, target segments, outreach strategy, and revenue goals.</p>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">—</div>
-          <h3>Advisory &amp; Assessment</h3>
-          <p>One-time commercial audit of your sales process, partnership strategy, or market positioning — delivered as a structured report with actionable recommendations.</p>
-        </div>
-      </div>
+      <ul class="svc-list">
+        <li>
+          <a href="fractional-cso.html">
+            <span class="svc-name">Fractional CSO</span>
+            <span class="svc-desc">Part-time Chief Strategy Officer embedding into your leadership team to shape commercial direction and drive alignment</span>
+            <span class="svc-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="sales-strategy.html">
+            <span class="svc-name">Sales Strategy &amp; Advisory</span>
+            <span class="svc-desc">Build a high-performing sales function — from pipeline architecture to team coaching and enterprise deals</span>
+            <span class="svc-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="market-expansion.html">
+            <span class="svc-name">Market Expansion (CEE)</span>
+            <span class="svc-desc">Entry into CEE, Balkans, and Baltics — landscape mapping, local go-to-market playbook, and in-market execution</span>
+            <span class="svc-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="partnership-development.html">
+            <span class="svc-name">Partnership Development</span>
+            <span class="svc-desc">Identify, develop, and close high-value partnerships in e-commerce, AdTech, SaaS, and retail</span>
+            <span class="svc-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="go-to-market.html">
+            <span class="svc-name">Go-to-Market Consulting</span>
+            <span class="svc-desc">Launch new products or enter new verticals with a clear GTM plan — positioning, segments, outreach, and revenue goals</span>
+            <span class="svc-arrow">→</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 
   <div class="page-section">
     <div class="section-inner">
       <p class="sec-label">Engagement models</p>
-      <h2 class="sec-title">Choose what works for you</h2>
-      <div class="engagement-grid">
-        <div class="eng-card">
-          <p class="eng-label">One-time</p>
-          <h3>Assessment &amp; Report</h3>
-          <p>A focused deep-dive into your commercial setup. I review your sales process, partnership strategy, or market positioning and deliver a clear action plan.</p>
-        </div>
-        <div class="eng-card featured">
-          <p class="eng-label">Most popular</p>
-          <h3>Fractional Retainer</h3>
-          <p>Ongoing part-time engagement — typically 1–2 days per week. I join your team, attend key meetings, and actively drive commercial results month to month.</p>
-        </div>
-        <div class="eng-card">
-          <p class="eng-label">Project-based</p>
-          <h3>Market Entry / GTM</h3>
-          <p>A defined project with a clear scope — entering a new market, launching a new product, or building a partnership pipeline from scratch.</p>
-        </div>
+      <h2 class="sec-title">How we work together</h2>
+      <div class="prose">
+        <p>I offer three ways to engage, depending on what you need and where you are in your journey.</p>
       </div>
-    </div>
-  </div>
-
-  <div class="page-section">
-    <div class="section-inner">
-      <p class="sec-label">Who I work with</p>
-      <h2 class="sec-title">This is for you if…</h2>
-      <div class="for-grid">
-        <div class="for-item">You're a startup or scale-up that needs senior commercial leadership but isn't ready for a full-time hire</div>
-        <div class="for-item">You're entering the CEE, Balkans, or Baltics market and need a local expert with an existing network</div>
-        <div class="for-item">Your sales or BD function needs structure, process, and someone to lead from the front</div>
-        <div class="for-item">You're launching a new product and need a go-to-market strategy and execution partner</div>
-        <div class="for-item">You want to build a meaningful partnership ecosystem, not just transactional deals</div>
-        <div class="for-item">You need an external perspective on your commercial strategy before your next funding round</div>
+      <div class="how-grid">
+        <div class="how-item">
+          <p class="how-label">Fractional retainer</p>
+          <p class="how-title">Ongoing part-time leadership</p>
+          <p class="how-body">Typically 1–2 days per week. I join your team, attend key meetings, and actively drive commercial results month to month. Most popular for companies that need a consistent strategic presence.</p>
+        </div>
+        <div class="how-item">
+          <p class="how-label">Project-based</p>
+          <p class="how-title">Defined scope, clear output</p>
+          <p class="how-body">A focused engagement with a specific goal — entering a new market, launching a product, or building a partnership pipeline from scratch. Fixed timeline and deliverables.</p>
+        </div>
+        <div class="how-item">
+          <p class="how-label">One-time</p>
+          <p class="how-title">Assessment &amp; report</p>
+          <p class="how-body">A deep-dive into your commercial setup — sales process, partnership strategy, or market positioning — delivered as a structured report with concrete recommendations.</p>
+        </div>
       </div>
     </div>
   </div>
